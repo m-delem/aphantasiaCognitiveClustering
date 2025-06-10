@@ -48,9 +48,13 @@ into a clean table.
 
 ```{r demographic_sassociations}
 df_association <- get_association_models(study_data, group)
+
 df_association |> dplyr::select(Variable, log_bf10)
+
 format_association_table(df_association, "Education")
+
 format_association_table(df_association, "Field")
+
 format_association_table(df_association, "Occupation")
 ```
 
@@ -87,16 +91,13 @@ from wide to long format easily, returning clean column names and values.
 study_data |> 
   get_longer() |> 
   dplyr::select(id, Group, Variable, value) |> 
-  head() |> 
-  knitr::kable()
+  head()
 ```
 
 The code to fit everything is straightforward:
 
 ```{r get_full_model_table_groups, eval = FALSE}
-study_data |>
-  get_longer() |>
-  get_full_model_table(Group)
+study_data |> get_longer() |> get_full_model_table(Group)
 ```
 
 The number of models to fit is quite large, so this code does not run here. 
@@ -154,9 +155,7 @@ the graph visualisation of the correlations with a specific overlapped layout
 using the [patchwork](https://cran.r-project.org/package=patchwork) package.
 
 ```{r correlations, fig.width=7, fig.height=5, eval = TRUE}
-study_data |> 
-  correlate_vars(partial = FALSE) |> 
-  plot_score_cor_joint()
+study_data |> correlate_vars(partial = FALSE) |> plot_score_cor_joint()
 ```
 
 As represented by the coloured nodes, the partial correlations allowed to
@@ -186,6 +185,8 @@ results of this model comparison visually.
 study_data |> cluster_selected_vars() |> plot_clusters_bic()
 ```
 
+## Clustering results
+
 The `merge_clusters()` function allows to merge the original data, the reduced
 variables and the cluster results easily.
 
@@ -199,15 +200,14 @@ colnames(df_merged)
 
 df_merged |> 
   dplyr::reframe(
-    .by = cluster,
+    .by = c(group, cluster),
     n       = dplyr::n(),
     vviq    = mean(vviq),
     object  = mean(osivq_o),
     spatial = mean(osivq_s),
     verbal  = mean(osivq_v)
   ) |> 
-  dplyr::arrange(cluster) |> 
-  knitr::kable(digits = 2)
+  dplyr::arrange(cluster)
 ```
 
 There are two clusters containing only aphantasic (cluster A) or control 
@@ -217,16 +217,83 @@ variable to analyse. The radar charts are a convenient way to visualise the
 scores of the clusters and sub-clusters on the reduced variables:
 
 ```{r plot_score_radars_clusters, fig.width=7, fig.height=3.5}
-df_merged_long <- 
+df_merged_long_reduced <- 
   df_merged |> 
   scale_vars() |> 
   get_longer() |> 
   filter_study_variables("reduced")
 
-plot_score_radars(df_merged_long, Cluster, r_off = 6, l_off = 6) + 
-  plot_score_radars(df_merged_long, Subcluster, r_off = 6, l_off = 6)
+plot_score_radars(df_merged_long_reduced, Cluster, r_off = 6, l_off = 6) + 
+  plot_score_radars(df_merged_long_reduced, Subcluster, r_off = 6, l_off = 6)
+```
+
+We computed the Bayes Factors for association of the clusters and subclusters
+with the demographic variables:
+
+```{r demographic_associations_clusters}
+df_asso_clusters <- get_association_models(df_merged, cluster)
+df_asso_subclusters <- get_association_models(df_merged, subcluster)
+
+df_asso_clusters |> dplyr::select(Variable, log_bf10)
+df_asso_subclusters |> dplyr::select(Variable, log_bf10)
+
+df_asso_clusters |> format_association_table("Education")
+df_asso_clusters |> format_association_table("Field")
+df_asso_clusters |> format_association_table("Occupation")
+
+df_asso_subclusters |> format_association_table("Education")
+df_asso_subclusters |> format_association_table("Field")
+df_asso_subclusters |> format_association_table("Occupation")
 ```
 
 
+Just like the group models, the code to model all the score variables with the 
+clusters and sub-clusters is straightforward:
 
+```{r get_full_model_table_clusters, eval = FALSE}
+df_merged_long <- 
+  df_merged |> 
+  scale_vars() |> 
+  get_longer()
+
+cluster_models    <- get_full_model_table(df_merged_long, Cluster)
+subcluster_models <- get_full_model_table(df_merged_long, Subcluster)
+```
+
+... And likewise, it takes a while to run, so models have been pre-computed
+and the results stored in the `models_list` object.
+
+Here are the Bayes Factors for inclusion of the predictors in the models for
+each variable, for the clusters and subclusters:
+
+```{r models_list_clusters_bfi}
+models_list$cluster_models |> 
+  dplyr::select(1:7) |> 
+  dplyr::distinct() |> 
+  knitr::kable()
+models_list$subcluster_models |> 
+  dplyr::select(1:7) |> 
+  dplyr::distinct() |> 
+  knitr::kable()
+```
+
+Finally, we can get the pairwise comparisons between the clusters and between
+the subclusters, with the Bayes Factors for the contrasts:
+
+```{r models_list_clusters_contrasts}
+models_list$cluster_models |> 
+  dplyr::select(1, 8:11) |> 
+  knitr::kable()
+models_list$subcluster_models |> 
+  dplyr::select(1, 8:11) |> 
+  knitr::kable()
+```
+
+------
+
+...And this concludes this data analysis report.
+
+```{r session_info}
+sessioninfo::session_info()
+```
 
