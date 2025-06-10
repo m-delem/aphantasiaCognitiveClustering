@@ -20,11 +20,11 @@
 #' @param txt_big Size of the text for the x-axis labels. Default is 7.
 #' @param txt_smol Size of the text for the y-axis labels. Default is 5.
 #' @param dot_size Size of the dots in the radar charts. Default is 0.8.
-#' @param lw Line width for the radar lines. Default is 0.2.
+#' @param lw_line,lw_error Line width for the main plot lines and error bars,
+#' respectively. Default is 0.2 for both.
 #' @param y_off Offset for the y-axis text to centre it. Default is 40.
-#' @param r_off Right offset for the plot margin. Default is 0.
-#' @param l_off Left offset for the plot margin. Default is 0.
-#' @param v_off Vertical offset for the plot margin. Default is 0.
+#' @param r_off,l_off,v_off Right, left and vertical offset for the plot
+#' margins. Default is 0 for all three.
 #' @param key Size of the legend key in mm. Default is 3.
 #' @param ... Additional arguments passed to the `superb` function.
 #'
@@ -71,7 +71,8 @@ plot_score_radars <- function(
     txt_big  = 7,
     txt_smol = 5,
     dot_size = 0.8,
-    lw       = 0.2,
+    lw_line  = 0.2,
+    lw_error = 0.2,
     y_off    = 40, # to center the y axis text
     r_off    = 0,
     l_off    = 0,
@@ -163,8 +164,8 @@ plot_score_radars <- function(
       data           = df_to_plot,
       plotStyle      = "circularline",
       pointParams    = list(size = dot_size),
-      lineParams     = list(linewidth = lw),
-      errorbarParams = list(linewidth = lw, show.legend = FALSE),
+      lineParams     = list(linewidth = lw_line),
+      errorbarParams = list(linewidth = lw_error, show.legend = FALSE),
       adjustments    = list(purpose = "single"),
       ...
     ) +

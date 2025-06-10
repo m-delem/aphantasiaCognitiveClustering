@@ -10,7 +10,8 @@ plot_score_radars(
   txt_big = 7,
   txt_smol = 5,
   dot_size = 0.8,
-  lw = 0.2,
+  lw_line = 0.2,
+  lw_error = 0.2,
   y_off = 40,
   r_off = 0,
   l_off = 0,
@@ -34,15 +35,13 @@ this variable.}
 
 \item{dot_size}{Size of the dots in the radar charts. Default is 0.8.}
 
-\item{lw}{Line width for the radar lines. Default is 0.2.}
+\item{lw_line, lw_error}{Line width for the main plot lines and error bars,
+respectively. Default is 0.2 for both.}
 
 \item{y_off}{Offset for the y-axis text to centre it. Default is 40.}
 
-\item{r_off}{Right offset for the plot margin. Default is 0.}
-
-\item{l_off}{Left offset for the plot margin. Default is 0.}
-
-\item{v_off}{Vertical offset for the plot margin. Default is 0.}
+\item{r_off, l_off, v_off}{Right, left and vertical offset for the plot
+margins. Default is 0 for all three.}
 
 \item{key}{Size of the legend key in mm. Default is 3.}
 

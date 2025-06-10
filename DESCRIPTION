@@ -41,6 +41,7 @@ Suggests:
     factoextra (>= 1.0.7),
     ggraph (>= 2.2.1),
     here,
+    hexSticker,
     knitr,
     logspline (>= 2.1.22),
     patchwork,
@@ -48,6 +49,7 @@ Suggests:
     rstanarm (>= 2.32.1),
     see (>= 0.11.0),
     sessioninfo (== 1.2.2),
+    showtext,
     superb (>= 0.95.19),
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

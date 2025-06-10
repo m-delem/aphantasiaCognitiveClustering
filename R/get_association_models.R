@@ -108,7 +108,7 @@ format_association_table <- function(df, variable) {
     tidyr::unnest("table") |>
     dplyr::ungroup() |>
     dplyr::select(!c("Variable", "data", "log_bf10")) |>
-    dplyr::rename(!!variable := .data$value) |>
+    dplyr::rename(!!variable := "value") |>
     knitr::kable()
 
   return(table_association)

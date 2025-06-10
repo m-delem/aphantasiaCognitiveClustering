@@ -1,31 +1,30 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# aphantasiaCognitiveClustering
+# aphantasiaCognitiveClustering <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
 
 [<img alt="alt_text" src="https://img.shields.io/badge/OSF-https://osf.io/7vsx6/-337AB7"/>](https://osf.io/7vsx6/)
 [![Codecov test
-coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg)](https://app.codecov.io/gh/m-delem/aphantasiaCognitiveClustering)
+coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg)](https://app.codecov.io/gh/m-delem/ap²hantasiaCognitiveClustering)
 <!-- badges: end -->
 
-aphantasiaCognitiveClustering is actually a data analysis project
-disguised as an R package. It contains the code and data to reproduce
-the analyses presented in the paper “*Uncovering spatial and verbal
-cognitive profiles in aphantasia through unsupervised clustering*” by
-Delem et al. (2025, *in review*). The complete study materials are
-available in [this OSF project](https://osf.io/7vsx6/).
+aphantasiaCognitiveClustering is a data analysis project disguised as an
+R package. It contains the code and data to reproduce the analyses
+presented in the paper “*Uncovering spatial and verbal cognitive
+profiles in aphantasia through unsupervised clustering*” by Delem et
+al. (2025, *in review*). The complete study materials are available in
+[this OSF project](https://osf.io/7vsx6/).
 
 The R package structure was chosen to facilitate the sharing of the code
-and data with the scientific community, and to allow for easy
-reproduction of the analyses. It is not intended to be a general-purpose
-package, but rather a collection of functions and data specific to this
-study (although many functions are reusable in their own right). The
-package development workflow (see [this reference
-book](https://r-pkgs.org/)) is also a good way to ensure that the code
-is well-documented and tested, which is important for reproducibility in
-scientific research.
+and data with the scientific community, and to make it easy to reproduce
+the analyses. It is not intended to be a general-purpose package, but
+rather a collection of functions and data specific to this study
+(although many functions are reusable in their own right). The package
+development workflow (see [this reference book](https://r-pkgs.org/)) is
+also a good way to ensure that the code is well-documented and tested,
+which is important for reproducibility in scientific research.
 
 ## Installation
 
@@ -46,7 +45,7 @@ following command:
 devtools::load_all()
 #> ℹ Loading aphantasiaCognitiveClustering
 #> Welcome to aphantasiaCognitiveClustering.
-#> This is actually a data analysis project 'desguised' as a package.
+#> This is actually a data analysis project 'disguised' as a package.
 #> It contains the code and data to reproduce the analyses presented
 #> in an article.
 #> See https://osf.io/7vsx6/ for the complete study materials.
@@ -98,7 +97,7 @@ functions:
 
 - `correlate_vars()`: This function computes the correlation matrix of
   the observed variables, returning a data frame with the correlations
-  and their significance levels. It allowed us to identify the variables
+  and their significance levels. It allowed to identify the variables
   that were most relevant for clustering.
 
 - `cluster_selected_vars()`: This function performs clustering on a
@@ -113,4 +112,5 @@ the package. Finally, a suite of functions is provided to visualise the
 results of the analyses, such as `plot_score_violins()`,
 `plot_score_radars()`, or `plot_score_cor_matrix()`, etc.
 
-See the main vignette for a complete report of the analyses.
+See the main vignette for the complete data analysis report this package
+was built for.
