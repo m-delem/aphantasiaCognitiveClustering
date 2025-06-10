@@ -17,7 +17,7 @@ NULL
   Welcome to {cyan aphantasiaCognitiveClustering}.
   This is actually a data analysis project 'desguised' as a package.
   It contains the code and data to reproduce the analyses presented
-  in an article. See '{magenta vignette('analysis-report')}' for more details.
+  in an article.
   See {magenta https://osf.io/7vsx6/} for the complete study materials.
   }",
   .literal = TRUE

@@ -21,7 +21,7 @@
 #' @param txt_smol Size of the text for the y-axis labels. Default is 5.
 #' @param dot_size Size of the dots in the radar charts. Default is 0.8.
 #' @param lw Line width for the radar lines. Default is 0.2.
-#' @param y_off Offset for the y-axis text to centre it. Default is 50.
+#' @param y_off Offset for the y-axis text to centre it. Default is 40.
 #' @param r_off Right offset for the plot margin. Default is 0.
 #' @param l_off Left offset for the plot margin. Default is 0.
 #' @param v_off Vertical offset for the plot margin. Default is 0.
@@ -72,7 +72,7 @@ plot_score_radars <- function(
     txt_smol = 5,
     dot_size = 0.8,
     lw       = 0.2,
-    y_off    = 50, # to center the y axis text
+    y_off    = 40, # to center the y axis text
     r_off    = 0,
     l_off    = 0,
     v_off    = 0,

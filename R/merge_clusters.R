@@ -22,19 +22,18 @@
 #' )
 #' head(df_merged)
 #' colnames(df_merged)
-#' if (requireNamespace("dplyr")) {
-#'   df_merged |>
-#'     dplyr::reframe(
-#'       .by = cluster,
-#'       n = dplyr::n(),
-#'       vviq    = mean(vviq),
-#'       object  = mean(osivq_o),
-#'       spatial = mean(osivq_s),
-#'       verbal  = mean(osivq_v)
-#'     ) |>
-#'     dplyr::arrange(cluster) |>
-#'     print()
-#' }
+#' @examplesIf requireNamespace("dplyr")
+#' df_merged |>
+#'   dplyr::reframe(
+#'     .by = cluster,
+#'     n = dplyr::n(),
+#'     vviq    = mean(vviq),
+#'     object  = mean(osivq_o),
+#'     spatial = mean(osivq_s),
+#'     verbal  = mean(osivq_v)
+#'    ) |>
+#'    dplyr::arrange(cluster) |>
+#'    print()
 merge_clusters <- function(
     df_raw,
     df_red,

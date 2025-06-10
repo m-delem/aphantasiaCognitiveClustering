@@ -35,17 +35,17 @@ df_merged <- merge_clusters(
 )
 head(df_merged)
 colnames(df_merged)
-if (requireNamespace("dplyr")) {
-  df_merged |>
-    dplyr::reframe(
-      .by = cluster,
-      n = dplyr::n(),
-      vviq    = mean(vviq),
-      object  = mean(osivq_o),
-      spatial = mean(osivq_s),
-      verbal  = mean(osivq_v)
-    ) |>
-    dplyr::arrange(cluster) |>
-    print()
-}
+\dontshow{if (requireNamespace("dplyr")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+df_merged |>
+  dplyr::reframe(
+    .by = cluster,
+    n = dplyr::n(),
+    vviq    = mean(vviq),
+    object  = mean(osivq_o),
+    spatial = mean(osivq_s),
+    verbal  = mean(osivq_v)
+   ) |>
+   dplyr::arrange(cluster) |>
+   print()
+\dontshow{\}) # examplesIf}
 }

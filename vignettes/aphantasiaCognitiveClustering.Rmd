@@ -1,0 +1,232 @@
+---
+title: "aphantasiaCognitiveClustering: Data analysis report"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Complete analysis with aphantasiaCognitiveClustering}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This document contains the entire data analysis pipeline 
+aphantasiaCognitiveClustering was built for and the associated results reported
+in the article "*Uncovering spatial and verbal cognitive profiles in aphantasia
+through unsupervised clustering*" (Delem et al., 2025). 
+
+The main dataset used for the analysis is included in the package in the
+`study_data` data frame.
+
+```{r setup, message = FALSE}
+library(aphantasiaCognitiveClustering)
+
+head(study_data) |> knitr::kable()
+```
+
+# VVIQ group analysis
+
+We first analysed the data in light of the VVIQ groups, examining differences 
+between individuals with aphantasia and controls.
+
+## Demographic variables
+
+We tested the education level, fields of study and occupations of the
+participants for any association with the two groups. The 
+`get_association_models()` function was designed to compute Bayes Factors for 
+associations between a grouping variable (here `group`) and the variables
+`education`, `field` and `occupation` in the data. The computation relies on the
+[BayesFactors](https://cran.r-project.org/package=BayesFactor) package.
+
+The associated function `format_association_table()` extracts the contingency
+table from the nested output of `get_association_models()` and formats it
+into a clean table.
+
+```{r demographic_sassociations}
+df_association <- get_association_models(study_data, group)
+df_association |> dplyr::select(Variable, log_bf10)
+format_association_table(df_association, "Education")
+format_association_table(df_association, "Field")
+format_association_table(df_association, "Occupation")
+```
+
+## Main score variables
+
+We analysed the main questionnaire and task score variables in the data, 
+which are: the VVIQ, the three OSIVQ subscales (object, spatial, verbal), the
+seven Psi-Q subscales (vision, auditory, smell, taste, touch, sensations, 
+feelings), the Raven matrices, the SRI (spatial test), the digit span, the
+spatial span, the similarities test, the WCST (executive functions test), and 
+the reading comprehension task.
+
+We fitted Bayesian linear models to the various variables to model them 
+with participant groups as categorical predictors and age as a continuous 
+covariate so as to control for the potential influence of the latter. We used
+the [bayestestR](https://cran.r-project.org/package=bayestestR) package to 
+compute the Bayes Factor for inclusion of the grouping variable and the age 
+covariate in the models. To get Bayes Factors for the contrasts between the 
+groups, we fitted models for the prior and posterior distributions using the
+[rstanarm](https://cran.r-project.org/package=rstanarm) package (with default
+settings) then used the [emmeans](https://cran.r-project.org/package=emmeans) 
+package to compute the contrasts.
+
+The `get_mean_sd()` function provides a quick way to compute and format the
+mean and standard deviation of the variables for each group, while the
+`get_bf_inclusion()` and `get_contrast_bf()` functions take care of the two 
+modelling steps described above. All three are wrapped in the 
+`get_full_model_table()` function, which is designed to run the full analysis 
+pipeline for each variable in any long format data frame with the appropriate 
+columns. The `get_longer()` function is designed to perform this transformation
+from wide to long format easily, returning clean column names and values.
+
+```{r get_longer_example}
+study_data |> 
+  get_longer() |> 
+  dplyr::select(id, Group, Variable, value) |> 
+  head() |> 
+  knitr::kable()
+```
+
+The code to fit everything is straightforward:
+
+```{r get_full_model_table_groups, eval = FALSE}
+study_data |>
+  get_longer() |>
+  get_full_model_table(Group)
+```
+
+The number of models to fit is quite large, so this code does not run here. 
+However, the results are saved natively in the package in the `models_list`
+object. The resulting data frame for the two groups is the first item of this
+list:
+
+```{r models_list_groups}
+models_list$group_models |> 
+  filter_study_variables("original") |> 
+  dplyr::select(!Comparison) |> 
+  knitr::kable()
+```
+
+The `filter_study_variables()` function is a convenience function to filter
+a set of variables from our study. Here the table contains only the original
+raw scores, leaving out the transformed variables created later in the analyses.
+
+Two functions are provided to visualise the data, 
+`plot_score_violins()` (used in the paper for the groups) and 
+`plot_score_radars()` (used later in the paper for the clusters). The latter
+requires a `Cluster` column (I know, not a great design), so we'll use it later. 
+`plot_score_violins()` uses the [see](https://cran.r-project.org/package=see) 
+package to plot half-violins, while `plot_score_radars()` uses the
+[superb](https://cran.r-project.org/package=superb) package to plot radar 
+charts. The `scale_vars()` function is used to rescale variables between 0 and 1 
+to plot them easily on the same scale.
+
+```{r plot_score_violins_groups, fig.width=7, fig.height=3.5}
+study_data |> 
+  scale_vars() |> 
+  get_longer() |>
+  filter_study_variables("original") |> 
+  plot_score_violins()
+```
+
+# Cluster analysis
+
+Faced with the lack of explanatory power of the VVIQ groups on many variables,
+we set out to explore the structure of the data using clustering analysis.
+This first required to study the relationships between the variables and
+select the most relevant to describe the sample.
+
+## Correlations
+
+We used partial correlations to identify the strongest links between variables 
+for variable reduction while reducing the bias from potential spurious 
+correlations. The `correlate_vars()` function wraps the function from the
+[correlation](https://cran.r-project.org/package=correlation) package to compute
+these correlations and conveniently renames the variables in the resulting
+object. Two plotting functions are provided to visualise the results, 
+`plot_score_cor_matrix()` and `plot_score_cor_graph()`. The two are wrapped in
+`plot_score_cor_joint()` to produce a joint plot of the correlation matrix and
+the graph visualisation of the correlations with a specific overlapped layout
+using the [patchwork](https://cran.r-project.org/package=patchwork) package.
+
+```{r correlations, fig.width=7, fig.height=5, eval = TRUE}
+study_data |> 
+  correlate_vars(partial = FALSE) |> 
+  plot_score_cor_joint()
+```
+
+As represented by the coloured nodes, the partial correlations allowed to
+identify related variables that could be relevant to merge and keep for the
+clustering analysis. The clustering process was conducted on the seven 
+following variables: *Visual imagery* (VVIQ + OSIVQ-O + Psi-Q V), *Sensory
+imagery* (Psi-Q Sm+Ta+To+Se+Fe), *Spatial imagery* (OSIVQ-S + SRI), 
+*Verbal strategies* (OSIVQ-V), *Raven + Digit span*, *Verbal reasoning* 
+(Similarity) and *Spatial span*.  
+
+## Number of clusters
+
+We chose to use a model-based method for clustering (Gaussian Mixture 
+Modelling) with the [mclust](https://cran.r-project.org/package=mclust) package.
+The `cluster_selected_vars()` function is computes the clustering on the 
+variables described above. Internally, it calls the `scale_reduce_vars()`
+function, which creates all the reduced composite variables identified with the
+partial correlations above and rescales them between 0 and 1.
+
+The optimal model and number of clusters was determined using the Bayesian
+Information Criterion (BIC) implemented in the mclust package. The 
+`plot_clusters_bic` uses 
+[factoextra](https://cran.r-project.org/package=factoextra) to represent the
+results of this model comparison visually.
+
+```{r plot_bic, fig.width=5, fig.height=4.5}
+study_data |> cluster_selected_vars() |> plot_clusters_bic()
+```
+
+The `merge_clusters()` function allows to merge the original data, the reduced
+variables and the cluster results easily.
+
+```{r merge_clusters}
+df_merged <- merge_clusters(
+  df_raw     = study_data,
+  df_red     = scale_reduce_vars(study_data),
+  clustering = cluster_selected_vars(study_data)
+)
+colnames(df_merged)
+
+df_merged |> 
+  dplyr::reframe(
+    .by = cluster,
+    n       = dplyr::n(),
+    vviq    = mean(vviq),
+    object  = mean(osivq_o),
+    spatial = mean(osivq_s),
+    verbal  = mean(osivq_v)
+  ) |> 
+  dplyr::arrange(cluster) |> 
+  knitr::kable(digits = 2)
+```
+
+There are two clusters containing only aphantasic (cluster A) or control 
+(cluster C) participants, while another cluster (cluster B) is mixed. By 
+dividing the latter into two "sub-clusters", we created a new `subcluster`
+variable to analyse. The radar charts are a convenient way to visualise the
+scores of the clusters and sub-clusters on the reduced variables:
+
+```{r plot_score_radars_clusters, fig.width=7, fig.height=3.5}
+df_merged_long <- 
+  df_merged |> 
+  scale_vars() |> 
+  get_longer() |> 
+  filter_study_variables("reduced")
+
+plot_score_radars(df_merged_long, Cluster, r_off = 6, l_off = 6) + 
+  plot_score_radars(df_merged_long, Subcluster, r_off = 6, l_off = 6)
+```
+
+
+
+

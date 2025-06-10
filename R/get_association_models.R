@@ -36,7 +36,7 @@
 get_association_models <- function(df, groups, type = "indepMulti") {
   rlang::check_installed("BayesFactor")
 
-  associations <-
+  df_associations <-
     df |>
     tidyr::pivot_longer(
       c("education", "field", "occupation"),
@@ -75,5 +75,41 @@ get_association_models <- function(df, groups, type = "indepMulti") {
       Variable = stringr::str_to_title(.data$Variable)
     )
 
-  return(associations)
+  return(df_associations)
+}
+
+#' Display the association table for a specific variable in a clean format
+#'
+#' This function was built specifically to provide an easy way to display the
+#' tables nested in the output of [get_association_models()] in a clean format.
+#' It is *really* not meant to be used outside of this context and it requires
+#' specific columns, so it is not likely to work with many other data frames.
+#'
+#' @param df A tibble containing the association table in a nested `table`
+#' column, typically the result of [get_association_models()].
+#' @param variable A character string specifying the variable for which to
+#' format the table. For the output of [get_association_models()], this
+#' should be one of `"Education"`, `"Field"`, or `"Occupation"`.
+#'
+#' @returns A table formatted with [knitr::kable()], ready to be displayed.
+#' @export
+#'
+#' @examples
+#' df_associations <- get_association_models(study_data, group)
+#' format_association_table(df_associations, "Education")
+#' format_association_table(df_associations, "Field")
+#' format_association_table(df_associations, "Occupation")
+format_association_table <- function(df, variable) {
+  rlang::check_installed("knitr")
+
+  table_association <-
+    df |>
+    dplyr::filter(.data$Variable == variable) |>
+    tidyr::unnest("table") |>
+    dplyr::ungroup() |>
+    dplyr::select(!c("Variable", "data", "log_bf10")) |>
+    dplyr::rename(!!variable := .data$value) |>
+    knitr::kable()
+
+  return(table_association)
 }

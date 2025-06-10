@@ -11,7 +11,7 @@ plot_score_radars(
   txt_smol = 5,
   dot_size = 0.8,
   lw = 0.2,
-  y_off = 50,
+  y_off = 40,
   r_off = 0,
   l_off = 0,
   v_off = 0,
@@ -36,7 +36,7 @@ this variable.}
 
 \item{lw}{Line width for the radar lines. Default is 0.2.}
 
-\item{y_off}{Offset for the y-axis text to centre it. Default is 50.}
+\item{y_off}{Offset for the y-axis text to centre it. Default is 40.}
 
 \item{r_off}{Right offset for the plot margin. Default is 0.}
 
