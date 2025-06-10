@@ -10,6 +10,13 @@
 
 This package contains all the code to reproduce the analyses reported in the article "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering".
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://m-delem.github.io/aphantasiaCognitiveClustering/}
+}
+
+}
 \author{
 \strong{Maintainer}: Maël Delem \email{mael.delem@pm.me} (\href{https://orcid.org/0009-0005-8518-1991}{ORCID})
 
