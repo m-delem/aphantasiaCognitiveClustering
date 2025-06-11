@@ -1,13 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# aphantasiaCognitiveClustering <img src="man/figures/logo.png" align="right" height="139" alt="" />
+# aphantasiaCognitiveClustering <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/"><img src="man/figures/logo.png" align="right" height="139" alt="aphantasiaCognitiveClustering website" /></a>
 
 <!-- badges: start -->
 
 [<img alt="alt_text" src="https://img.shields.io/badge/OSF-https://osf.io/7vsx6/-337AB7"/>](https://osf.io/7vsx6/)
+[![R-CMD-check](https://github.com/m-delem/aphantasiaCognitiveClustering/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-delem/aphantasiaCognitiveClustering/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg)](https://app.codecov.io/gh/m-delem/ap²hantasiaCognitiveClustering)
+coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg)](https://app.codecov.io/gh/m-delem/aphantasiaCognitiveClustering)
 <!-- badges: end -->
 
 aphantasiaCognitiveClustering is a data analysis project disguised as an
@@ -112,5 +113,6 @@ the package. Finally, a suite of functions is provided to visualise the
 results of the analyses, such as `plot_score_violins()`,
 `plot_score_radars()`, or `plot_score_cor_matrix()`, etc.
 
-See the main vignette for the complete data analysis report this package
-was built for.
+See [the main
+vignette](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/aphantasiaCognitiveClustering.html)
+for the complete data analysis report this package was built for.
