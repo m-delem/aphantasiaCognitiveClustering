@@ -45,7 +45,7 @@
 #'   filter_study_variables("original") |>
 #'   plot_score_violins(add_signif = TRUE, nrow = 2)
 #'
-#' # Alternative use with all original and reduced scaled variables
+#' # Alternative use with reduced scaled variables only
 #' merge_clusters(
 #'   df_raw     = study_data,
 #'   df_red     = scale_reduce_vars(study_data),

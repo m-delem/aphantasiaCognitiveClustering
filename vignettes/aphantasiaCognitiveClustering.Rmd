@@ -1,8 +1,8 @@
 ---
-title: "aphantasiaCognitiveClustering: Data analysis report"
+title: "Data Analysis Report"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Complete analysis with aphantasiaCognitiveClustering}
+  %\VignetteIndexEntry{Data Analysis Report}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -19,7 +19,7 @@ aphantasiaCognitiveClustering was built for and the associated results reported
 in the article "*Uncovering spatial and verbal cognitive profiles in aphantasia
 through unsupervised clustering*" (Delem et al., 2025). 
 
-The main dataset used for the analysis is included in the package in the
+The main dataset used for the analysis is included in the package as the
 `study_data` data frame.
 
 ```{r setup, message = FALSE}
@@ -40,7 +40,7 @@ participants for any association with the two groups. The
 `get_association_models()` function was designed to compute Bayes Factors for 
 associations between a grouping variable (here `group`) and the variables
 `education`, `field` and `occupation` in the data. The computation relies on the
-[BayesFactors](https://cran.r-project.org/package=BayesFactor) package.
+[BayesFactor](https://cran.r-project.org/package=BayesFactor) package.
 
 The associated function `format_association_table()` extracts the contingency
 table from the nested output of `get_association_models()` and formats it
@@ -155,7 +155,7 @@ the graph visualisation of the correlations with a specific overlapped layout
 using the [patchwork](https://cran.r-project.org/package=patchwork) package.
 
 ```{r correlations, fig.width=7, fig.height=5, eval = TRUE}
-study_data |> correlate_vars(partial = FALSE) |> plot_score_cor_joint()
+study_data |> correlate_vars(partial = TRUE) |> plot_score_cor_joint()
 ```
 
 As represented by the coloured nodes, the partial correlations allowed to

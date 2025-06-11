@@ -1,0 +1,35 @@
+url: https://m-delem.github.io/aphantasiaCognitiveClustering/
+template:
+  bootstrap: 5
+  light-switch: true
+  bslib:
+    base_font: {google: "Montserrat"}
+    heading_font: {google: "DM Sans"}
+reference:
+- title: "R objects"
+  contents:
+  - study_data
+  - models_list
+- title: "Data manipulation"
+  contents:
+  - filter_study_variables
+  - format_association_table
+  - get_longer
+  - merge_clusters
+  - scale_vars
+  - scale_reduce_vars
+- title: "Modelling"
+  contents:
+  - cluster_selected_vars
+  - fit_stan_glm
+  - get_association_models
+  - get_bf_inclusion
+  - get_contrast_bf
+  - get_full_model_table
+  - get_mean_sd
+  - correlate_vars
+- title: "Plotting"
+  contents:
+  - add_significance_geoms
+  - starts_with("plot_")
+  - save_ggplot

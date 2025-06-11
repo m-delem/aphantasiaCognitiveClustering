@@ -18,8 +18,8 @@ p_radars <-
     Cluster,
     r_off = 6,
     l_off = 6,
-    dot_size = 0.01,
-    lw_line  = 0.05,
+    dot_size = 0.5,
+    lw_line  = 0.2,
     lw_error = 0
   ) +
   ggplot2::theme_void() +
@@ -33,8 +33,8 @@ hexSticker::sticker(
   lineheight = 0.325,
   p_x     = 1,
   p_y     = 1,
-  p_size  = 14,
-  p_color = "#d5d9df",
+  p_size  = 15,
+  p_color = "#fff",
   h_color = "#394049",
   h_size  = 1,
   h_fill  = "#0c0e10",

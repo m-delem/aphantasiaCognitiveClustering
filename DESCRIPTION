@@ -1,6 +1,6 @@
 Package: aphantasiaCognitiveClustering
-Title: Data Analysis for the "Uncovering Cognitive Profiles in Aphantasia" Study
-Version: 0.1
+Title: Data Analysis for the "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia" Study
+Version: 1.0
 Authors@R: 
     person("Maël", "Delem", , "mael.delem@pm.me", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0005-8518-1991"))

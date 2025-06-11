@@ -44,11 +44,11 @@ test_that("modelling functions work properly", {
     colnames(get_association_models(df_merged, group)),
     c("Variable", "data", "table", "log_bf10")
   )
-  expect_equal(
+  expect_contains(
     get_association_models(study_data, group) |>
       format_association_table("Education") |>
       class(),
-    "knitr_kable"
+    "data.frame"
   )
   expect_error(get_association_models(df_merged, Group))
   expect_error(get_association_models(df_merged, "group"))

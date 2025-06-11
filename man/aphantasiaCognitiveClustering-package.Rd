@@ -4,7 +4,7 @@
 \name{aphantasiaCognitiveClustering-package}
 \alias{aphantasiaCognitiveClustering}
 \alias{aphantasiaCognitiveClustering-package}
-\title{aphantasiaCognitiveClustering: Data Analysis for the "Uncovering Cognitive Profiles in Aphantasia" Study}
+\title{aphantasiaCognitiveClustering: Data Analysis for the "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia" Study}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
