@@ -101,5 +101,6 @@ analyses, such as `plot_score_violins()`, `plot_score_radars()`, or
 
 See [the main vignette](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/aphantasiaCognitiveClustering.html) 
 for the complete data analysis report this package was built for.
+
   
 
