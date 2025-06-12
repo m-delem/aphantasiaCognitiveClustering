@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[<img alt="alt_text" src="https://img.shields.io/badge/OSF-https://osf.io/7vsx6/-337AB7"/>](https://osf.io/7vsx6/)
+[<img alt="alt_text" src="https://img.shields.io/badge/OSF-https://osf.io/7vsx6/-337AB7?logo=osf"/>](https://osf.io/7vsx6/)
 [![R-CMD-check](https://github.com/m-delem/aphantasiaCognitiveClustering/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-delem/aphantasiaCognitiveClustering/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg)](https://app.codecov.io/gh/m-delem/aphantasiaCognitiveClustering)
