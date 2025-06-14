@@ -4,7 +4,7 @@
 \name{aphantasiaCognitiveClustering-package}
 \alias{aphantasiaCognitiveClustering}
 \alias{aphantasiaCognitiveClustering-package}
-\title{aphantasiaCognitiveClustering: Data Analysis for the "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia" Study}
+\title{aphantasiaCognitiveClustering: Data Analysis for "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering"}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
@@ -14,6 +14,7 @@ This package contains all the code to reproduce the analyses reported in the art
 Useful links:
 \itemize{
   \item \url{https://m-delem.github.io/aphantasiaCognitiveClustering/}
+  \item \url{https://github.com/m-delem/aphantasiaCognitiveClustering}
 }
 
 }

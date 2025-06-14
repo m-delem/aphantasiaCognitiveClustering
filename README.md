@@ -38,9 +38,8 @@ pak::pak("m-delem/aphantasiaCognitiveClustering")
 ```
 
 Alternatively, you can clone the repository, launch the R project in
-RStudio by opening the `aphantasiaCognitiveClustering.Rproj` file,
-follow the instructions that appear in the console, and run the
-following command:
+RStudio by opening the `aphantasiaCognitiveClustering.Rproj` file and
+run the following command:
 
 ``` r
 devtools::load_all()
@@ -111,7 +110,7 @@ Some transformations of the shape of the data are also required to
 prepare them for certain steps, which are handled by other functions in
 the package. Finally, a suite of functions is provided to visualise the
 results of the analyses, such as `plot_score_violins()`,
-`plot_score_radars()`, or `plot_score_cor_matrix()`, etc.
+`plot_score_radars()`, `plot_score_cor_matrix()`, etc.
 
 See [the main
 vignette](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/aphantasiaCognitiveClustering.html)

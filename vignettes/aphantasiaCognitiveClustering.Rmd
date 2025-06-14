@@ -170,7 +170,7 @@ imagery* (Psi-Q Sm+Ta+To+Se+Fe), *Spatial imagery* (OSIVQ-S + SRI),
 
 We chose to use a model-based method for clustering (Gaussian Mixture 
 Modelling) with the [mclust](https://cran.r-project.org/package=mclust) package.
-The `cluster_selected_vars()` function is computes the clustering on the 
+The `cluster_selected_vars()` function computes the clustering on the 
 variables described above. Internally, it calls the `scale_reduce_vars()`
 function, which creates all the reduced composite variables identified with the
 partial correlations above and rescales them between 0 and 1.

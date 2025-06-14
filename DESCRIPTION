@@ -1,5 +1,5 @@
 Package: aphantasiaCognitiveClustering
-Title: Data Analysis for the "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia" Study
+Title: Data Analysis for "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering"
 Version: 1.0
 Authors@R: 
     person("Maël", "Delem", , "mael.delem@pm.me", role = c("aut", "cre"),
@@ -54,4 +54,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-URL: https://m-delem.github.io/aphantasiaCognitiveClustering/
+URL: https://m-delem.github.io/aphantasiaCognitiveClustering/, https://github.com/m-delem/aphantasiaCognitiveClustering
