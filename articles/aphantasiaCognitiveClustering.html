@@ -43,6 +43,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/m-delem/aphantasiaCognitiveClustering/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
@@ -66,7 +67,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Data Analysis Report</h1>
             
       
-
+      <small class="dont-index">Source: <a href="https://github.com/m-delem/aphantasiaCognitiveClustering/blob/master/vignettes/aphantasiaCognitiveClustering.Rmd" class="external-link"><code>vignettes/aphantasiaCognitiveClustering.Rmd</code></a></small>
       <div class="d-none name"><code>aphantasiaCognitiveClustering.Rmd</code></div>
     </div>
 
@@ -748,8 +749,8 @@ reasoning</em> (Similarity) and <em>Spatial span</em>.</p>
 </h3>
 <p>We chose to use a model-based method for clustering (Gaussian Mixture
 Modelling) with the <a href="https://cran.r-project.org/package=mclust" class="external-link">mclust</a> package. The
-<code><a href="../reference/cluster_selected_vars.html">cluster_selected_vars()</a></code> function is computes the clustering
-on the variables described above. Internally, it calls the
+<code><a href="../reference/cluster_selected_vars.html">cluster_selected_vars()</a></code> function computes the clustering on
+the variables described above. Internally, it calls the
 <code><a href="../reference/scale_reduce_vars.html">scale_reduce_vars()</a></code> function, which creates all the reduced
 composite variables identified with the partial correlations above and
 rescales them between 0 and 1.</p>
@@ -3315,7 +3316,7 @@ Age</th>
 <code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://sessioninfo.r-lib.org/reference/session_info.html" class="external-link">session_info</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB; font-weight: bold;">─ Session info ───────────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt;  <span style="color: #555555; font-style: italic;">setting </span> <span style="color: #555555; font-style: italic;">value</span></span></span>
-<span><span class="co">#&gt;  version  R version 4.5.0 (2025-04-11)</span></span>
+<span><span class="co">#&gt;  version  R version 4.5.1 (2025-06-13)</span></span>
 <span><span class="co">#&gt;  os       Ubuntu 24.04.2 LTS</span></span>
 <span><span class="co">#&gt;  system   x86_64, linux-gnu</span></span>
 <span><span class="co">#&gt;  ui       X11</span></span>
@@ -3323,17 +3324,18 @@ Age</th>
 <span><span class="co">#&gt;  collate  C.UTF-8</span></span>
 <span><span class="co">#&gt;  ctype    C.UTF-8</span></span>
 <span><span class="co">#&gt;  tz       UTC</span></span>
-<span><span class="co">#&gt;  date     2025-06-12</span></span>
+<span><span class="co">#&gt;  date     2025-06-14</span></span>
 <span><span class="co">#&gt;  pandoc   3.1.11 @ /opt/hostedtoolcache/pandoc/3.1.11/x64/ (via rmarkdown)</span></span>
 <span><span class="co">#&gt;  quarto   NA</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB; font-weight: bold;">─ Packages ───────────────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt;  <span style="color: #555555; font-style: italic;">!</span> <span style="color: #555555; font-style: italic;">package                      </span> <span style="color: #555555; font-style: italic;">*</span> <span style="color: #555555; font-style: italic;">version   </span> <span style="color: #555555; font-style: italic;">date (UTC)</span> <span style="color: #555555; font-style: italic;">lib</span> <span style="color: #555555; font-style: italic;">source</span></span></span>
 <span><span class="co">#&gt;    abind                           1.4-8      <span style="color: #555555;">2024-09-12</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
-<span><span class="co">#&gt;    aphantasiaCognitiveClustering * 1.0        <span style="color: #555555;">2025-06-12</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">local</span></span></span>
+<span><span class="co">#&gt;    aphantasiaCognitiveClustering * 1.0        <span style="color: #555555;">2025-06-14</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">local</span></span></span>
 <span><span class="co">#&gt;    backports                       1.5.0      <span style="color: #555555;">2024-05-23</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    BayesFactor                     0.9.12-4.7 <span style="color: #555555;">2024-01-24</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    bayestestR                      0.16.0     <span style="color: #555555;">2025-05-20</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;    BiocManager                     1.30.26    <span style="color: #555555;">2025-06-05</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    broom                           1.0.8      <span style="color: #555555;">2025-03-28</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    bslib                           0.9.0      <span style="color: #555555;">2025-01-30</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    cachem                          1.1.0      <span style="color: #555555;">2024-05-16</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
@@ -3345,14 +3347,16 @@ Age</th>
 <span><span class="co">#&gt;    crayon                          1.5.3      <span style="color: #555555;">2024-06-20</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    datawizard                      1.1.0      <span style="color: #555555;">2025-05-09</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    desc                            1.4.3      <span style="color: #555555;">2023-12-10</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> devtools                      * 2.4.5      <span style="color: #555555;">2022-10-11</span> <span style="color: #555555;">[?]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    digest                          0.6.37     <span style="color: #555555;">2024-08-19</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    dplyr                           1.1.4      <span style="color: #555555;">2023-11-17</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> ellipsis                        0.3.2      <span style="color: #555555;">2021-04-29</span> <span style="color: #555555;">[?]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    evaluate                        1.0.3      <span style="color: #555555;">2025-01-10</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    factoextra                      1.0.7      <span style="color: #555555;">2020-04-01</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    farver                          2.1.2      <span style="color: #555555;">2024-05-13</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    fastmap                         1.2.0      <span style="color: #555555;">2024-05-15</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    forcats                         1.0.0      <span style="color: #555555;">2023-01-29</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
-<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> foreign                         0.8-90     <span style="color: #555555;">2025-03-31</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.0)</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> foreign                         0.8-90     <span style="color: #555555;">2025-03-31</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.1)</span></span></span>
 <span><span class="co">#&gt;    Formula                         1.2-5      <span style="color: #555555;">2023-02-24</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    fs                              1.6.6      <span style="color: #555555;">2025-04-12</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    generics                        0.1.4      <span style="color: #555555;">2025-05-09</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
@@ -3376,24 +3380,28 @@ Age</th>
 <span><span class="co">#&gt;    knitr                           1.50       <span style="color: #555555;">2025-03-16</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    labeling                        0.4.3      <span style="color: #555555;">2023-08-29</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    later                           1.4.2      <span style="color: #555555;">2025-04-08</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
-<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> lattice                         0.22-6     <span style="color: #555555;">2024-03-20</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.0)</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> lattice                         0.22-7     <span style="color: #555555;">2025-04-02</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.1)</span></span></span>
 <span><span class="co">#&gt;    lifecycle                       1.0.4      <span style="color: #555555;">2023-11-07</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    lsr                             0.5.2      <span style="color: #555555;">2021-12-01</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    magrittr                        2.0.3      <span style="color: #555555;">2022-03-30</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
-<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> MASS                            7.3-65     <span style="color: #555555;">2025-02-28</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.0)</span></span></span>
-<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> Matrix                          1.7-3      <span style="color: #555555;">2025-03-11</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.0)</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> MASS                            7.3-65     <span style="color: #555555;">2025-02-28</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.1)</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> Matrix                          1.7-3      <span style="color: #555555;">2025-03-11</span> <span style="color: #555555;">[?]</span> <span style="color: #555555;">CRAN (R 4.5.1)</span></span></span>
 <span><span class="co">#&gt;    MatrixModels                    0.5-4      <span style="color: #555555;">2025-03-26</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    mclust                          6.1.1      <span style="color: #555555;">2024-04-29</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    memoise                         2.0.1      <span style="color: #555555;">2021-11-26</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    mime                            0.13       <span style="color: #555555;">2025-03-17</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;    miniUI                          0.1.2      <span style="color: #555555;">2025-04-17</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    mvtnorm                         1.3-3      <span style="color: #555555;">2025-01-10</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    patchwork                       1.3.0      <span style="color: #555555;">2024-09-16</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    pbapply                         1.7-2      <span style="color: #555555;">2023-06-27</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    pillar                          1.10.2     <span style="color: #555555;">2025-04-05</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;    pkgbuild                        1.4.8      <span style="color: #555555;">2025-05-26</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    pkgconfig                       2.0.3      <span style="color: #555555;">2019-09-22</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    pkgdown                         2.1.3      <span style="color: #555555;">2025-05-25</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">any (@2.1.3)</span></span></span>
+<span><span class="co">#&gt;    pkgload                         1.4.0      <span style="color: #555555;">2024-06-28</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    plyr                            1.8.9      <span style="color: #555555;">2023-10-02</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    polyclip                        1.10-7     <span style="color: #555555;">2024-07-23</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> profvis                         0.4.0      <span style="color: #555555;">2024-09-20</span> <span style="color: #555555;">[?]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    promises                        1.3.3      <span style="color: #555555;">2025-05-29</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    purrr                           1.0.4      <span style="color: #555555;">2025-02-05</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    R6                              2.6.1      <span style="color: #555555;">2025-02-15</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
@@ -3402,6 +3410,7 @@ Age</th>
 <span><span class="co">#&gt;    RColorBrewer                    1.1-3      <span style="color: #555555;">2022-04-03</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    Rcpp                            1.0.14     <span style="color: #555555;">2025-01-12</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    Rdpack                          2.6.4      <span style="color: #555555;">2025-04-09</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> remotes                         2.5.0      <span style="color: #555555;">2024-03-17</span> <span style="color: #555555;">[?]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    renv                            1.1.4      <span style="color: #555555;">2025-03-20</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM (R 4.5.0)</span></span></span>
 <span><span class="co">#&gt;    rlang                           1.1.6      <span style="color: #555555;">2025-04-11</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    rmarkdown                       2.29       <span style="color: #555555;">2024-11-04</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
@@ -3423,6 +3432,8 @@ Age</th>
 <span><span class="co">#&gt;    tidyr                           1.3.1      <span style="color: #555555;">2024-01-24</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    tidyselect                      1.2.1      <span style="color: #555555;">2024-03-11</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    tweenr                          2.0.3      <span style="color: #555555;">2024-02-26</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> urlchecker                      1.0.1      <span style="color: #555555;">2021-11-30</span> <span style="color: #555555;">[?]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> usethis                       * 3.1.0      <span style="color: #555555;">2024-11-26</span> <span style="color: #555555;">[?]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    utf8                            1.2.6      <span style="color: #555555;">2025-06-08</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    vctrs                           0.6.5      <span style="color: #555555;">2023-12-01</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt;    viridis                         0.6.5      <span style="color: #555555;">2024-01-29</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
@@ -3433,7 +3444,7 @@ Age</th>
 <span><span class="co">#&gt;    yaml                            2.3.10     <span style="color: #555555;">2024-07-26</span> <span style="color: #555555;">[1]</span> <span style="color: #BB00BB; font-weight: bold;">RSPM</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #555555;"> [1] /home/runner/.cache/R/renv/library/aphantasiaCognitiveClustering-3eb0a6a4/linux-ubuntu-noble/R-4.5/x86_64-pc-linux-gnu</span></span></span>
-<span><span class="co">#&gt; <span style="color: #555555;"> [2] /home/runner/.cache/R/renv/sandbox/linux-ubuntu-noble/R-4.5/x86_64-pc-linux-gnu/23465bf0</span></span></span>
+<span><span class="co">#&gt; <span style="color: #555555;"> [2] /home/runner/.cache/R/renv/sandbox/linux-ubuntu-noble/R-4.5/x86_64-pc-linux-gnu/179fe56a</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">*</span> ── Packages attached to the search path.</span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBBBB; background-color: #BB0000;">P</span> ── Loaded and on-disk path mismatch.</span></span>
