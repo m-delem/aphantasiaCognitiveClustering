@@ -39,8 +39,14 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item"><a class="nav-link" href="articles/aphantasiaCognitiveClustering.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="articles/manuscript.html">Reproducible manuscript</a></li>
+    <li><a class="dropdown-item" href="articles/analysis_report.html">Comprehensive data analysis report</a></li>
+  </ul>
+</li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -70,7 +76,7 @@
 </div>
 <!-- badges: start -->
 
-<p>aphantasiaCognitiveClustering is a data analysis project disguised as an R package. It contains the code and data to reproduce the analyses presented in the paper “<em>Uncovering spatial and verbal cognitive profiles in aphantasia through unsupervised clustering</em>” by Delem et al. (2025, <em>in review</em>). The complete study materials are available in <a href="https://osf.io/7vsx6/" class="external-link">this OSF project</a>.</p>
+<p>aphantasiaCognitiveClustering is a data analysis project disguised as an R package. It contains the code and data to reproduce the analyses presented in the paper “<em>Beyond visual imagery: Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery</em>” by Delem et al. (2025, <em>in review</em>). The complete study materials are available in <a href="https://osf.io/7vsx6/" class="external-link">this OSF project</a> and the reproducible manuscript can be found <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html">in the package documentation</a>.</p>
 <p>The R package structure was chosen to facilitate the sharing of the code and data with the scientific community, and to make it easy to reproduce the analyses. It is not intended to be a general-purpose package, but rather a collection of functions and data specific to this study (although many functions are reusable in their own right). The package development workflow (see <a href="https://r-pkgs.org/" class="external-link">this reference book</a>) is also a good way to ensure that the code is well-documented and tested, which is important for reproducibility in scientific research.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -120,7 +126,7 @@
 <li><p><code><a href="reference/cluster_selected_vars.html">cluster_selected_vars()</a></code>: This function performs clustering on a selection of variables, returning a data frame with the cluster assignments for each participant. We can then reuse <code><a href="reference/get_association_models.html">get_association_models()</a></code> and <code><a href="reference/get_full_model_table.html">get_full_model_table()</a></code> to fit new models with these clusters.</p></li>
 </ul>
 <p>Some transformations of the shape of the data are also required to prepare them for certain steps, which are handled by other functions in the package. Finally, a suite of functions is provided to visualise the results of the analyses, such as <code><a href="reference/plot_score_violins.html">plot_score_violins()</a></code>, <code><a href="reference/plot_score_radars.html">plot_score_radars()</a></code>, <code><a href="reference/plot_score_cor_matrix.html">plot_score_cor_matrix()</a></code>, etc.</p>
-<p>See <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/aphantasiaCognitiveClustering.html">the main vignette</a> for the complete data analysis report this package was built for.</p>
+<p>See the <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html">complete data analysis report</a> this package was built for.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

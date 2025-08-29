@@ -29,8 +29,12 @@ render best as small dimension PDF vector figures for journals."><meta property=
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../articles/aphantasiaCognitiveClustering.html">Get started</a></li>
-<li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+      <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/manuscript.html">Reproducible manuscript</a></li>
+    <li><a class="dropdown-item" href="../articles/analysis_report.html">Comprehensive data analysis report</a></li>
+  </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/m-delem/aphantasiaCognitiveClustering/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -152,28 +156,31 @@ margins. Default is 0 for all three.</p></dd>
 <span class="r-in"><span>  <span class="va">df_merged_long</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="filter_study_variables.html">filter_study_variables</a></span><span class="op">(</span><span class="st">"original"</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">plot_score_radars</span><span class="op">(</span><span class="va">Group</span>, r_off <span class="op">=</span> <span class="fl">6</span>, l_off <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in superbPlot(data = data, variables = DVvars, BSFactors = BSfacts,     WSFactors = if (length(WSfacts2) == 0) WSFactors else WSfacts2,     WSDesign = wsdesign, statistic = statistic, errorbar = errorbar,     gamma = gamma, adjustments = adjustments, factorOrder = factorOrder,     plotStyle = plotStyle, plotLayout = plotLayout, showPlot = showPlot,     preprocessfct = preprocessfct, postprocessfct = postprocessfct,     clusterColumn = clusterColumn, ...):</span> superb::ERROR(22): The function CI.mean is not a known function for error bars. Exiting...</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Clusters on the reduced + validation variables</span></span></span>
 <span class="r-in"><span><span class="va">p2</span> <span class="op">&lt;-</span></span></span>
 <span class="r-in"><span>  <span class="va">df_merged_long</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="filter_study_variables.html">filter_study_variables</a></span><span class="op">(</span><span class="st">"reduced"</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">plot_score_radars</span><span class="op">(</span><span class="va">Cluster</span>, r_off <span class="op">=</span> <span class="fl">6</span>, l_off <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in superbPlot(data = data, variables = DVvars, BSFactors = BSfacts,     WSFactors = if (length(WSfacts2) == 0) WSFactors else WSfacts2,     WSDesign = wsdesign, statistic = statistic, errorbar = errorbar,     gamma = gamma, adjustments = adjustments, factorOrder = factorOrder,     plotStyle = plotStyle, plotLayout = plotLayout, showPlot = showPlot,     preprocessfct = preprocessfct, postprocessfct = postprocessfct,     clusterColumn = clusterColumn, ...):</span> superb::ERROR(22): The function CI.mean is not a known function for error bars. Exiting...</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Subclusters on the reduced variables</span></span></span>
 <span class="r-in"><span><span class="va">p3</span> <span class="op">&lt;-</span></span></span>
 <span class="r-in"><span>  <span class="va">df_merged_long</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="filter_study_variables.html">filter_study_variables</a></span><span class="op">(</span><span class="st">"reduced_strict"</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">plot_score_radars</span><span class="op">(</span><span class="va">Subcluster</span>, r_off <span class="op">=</span> <span class="fl">6</span>, l_off <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in superbPlot(data = data, variables = DVvars, BSFactors = BSfacts,     WSFactors = if (length(WSfacts2) == 0) WSFactors else WSfacts2,     WSDesign = wsdesign, statistic = statistic, errorbar = errorbar,     gamma = gamma, adjustments = adjustments, factorOrder = factorOrder,     plotStyle = plotStyle, plotLayout = plotLayout, showPlot = showPlot,     preprocessfct = preprocessfct, postprocessfct = postprocessfct,     clusterColumn = clusterColumn, ...):</span> superb::ERROR(22): The function CI.mean is not a known function for error bars. Exiting...</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Clusters on all the variables</span></span></span>
 <span class="r-in"><span><span class="va">p4</span> <span class="op">&lt;-</span> <span class="va">df_merged_long</span> <span class="op">|&gt;</span> <span class="fu">plot_score_radars</span><span class="op">(</span><span class="va">Cluster</span>, r_off <span class="op">=</span> <span class="fl">6</span>, l_off <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in superbPlot(data = data, variables = DVvars, BSFactors = BSfacts,     WSFactors = if (length(WSfacts2) == 0) WSFactors else WSfacts2,     WSDesign = wsdesign, statistic = statistic, errorbar = errorbar,     gamma = gamma, adjustments = adjustments, factorOrder = factorOrder,     plotStyle = plotStyle, plotLayout = plotLayout, showPlot = showPlot,     preprocessfct = preprocessfct, postprocessfct = postprocessfct,     clusterColumn = clusterColumn, ...):</span> superb::ERROR(22): The function CI.mean is not a known function for error bars. Exiting...</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://patchwork.data-imaginist.com" class="external-link">"patchwork"</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">p1</span> <span class="op">+</span> <span class="va">p2</span><span class="op">)</span></span></span>
 <span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">p3</span> <span class="op">+</span> <span class="va">p4</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="kw">else</span> <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">p1</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="plot_score_radars-1.png" alt="" width="700" height="433"></span>
-<span class="r-plt img"><img src="plot_score_radars-2.png" alt="" width="700" height="433"></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'p1' not found</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

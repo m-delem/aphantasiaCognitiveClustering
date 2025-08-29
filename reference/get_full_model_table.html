@@ -33,8 +33,12 @@ Bayes Factor for Inclusion, and contrasts."><meta property="og:image" content="h
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../articles/aphantasiaCognitiveClustering.html">Get started</a></li>
-<li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+      <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/manuscript.html">Reproducible manuscript</a></li>
+    <li><a class="dropdown-item" href="../articles/analysis_report.html">Comprehensive data analysis report</a></li>
+  </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/m-delem/aphantasiaCognitiveClustering/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -111,9 +115,9 @@ output of <code>get_longer(study_data)</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 11</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Variable `A (Aphant.)` `B (Mixed)`  `C (Control)` Cluster   Age</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> VVIQ     18.06 (4.1)   36.5 (17.56) 62.18 (8.66)     54.9 -<span style="color: #BB0000;">1.09</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> VVIQ     18.06 (4.1)   36.5 (17.56) 62.18 (8.66)     54.9 -<span style="color: #BB0000;">1.09</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> VVIQ     18.06 (4.1)   36.5 (17.56) 62.18 (8.66)     54.9 -<span style="color: #BB0000;">1.09</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> VVIQ     18.06 (4.1)   36.5 (17.56) 62.18 (8.66)     54.9 -<span style="color: #BB0000;">1.11</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> VVIQ     18.06 (4.1)   36.5 (17.56) 62.18 (8.66)     54.9 -<span style="color: #BB0000;">1.11</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> VVIQ     18.06 (4.1)   36.5 (17.56) 62.18 (8.66)     54.9 -<span style="color: #BB0000;">1.11</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 5 more variables: `Cluster $\\times$ Age` &lt;dbl&gt;, Comparison &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   `Difference ($\\Delta$)` &lt;dbl&gt;, `95% CrI` &lt;chr&gt;, `$log(BF_{10})$` &lt;dbl&gt;</span></span>
 </code></pre></div>
