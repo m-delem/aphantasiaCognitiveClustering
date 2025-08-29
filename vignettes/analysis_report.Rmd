@@ -1,8 +1,8 @@
 ---
-title: "Data Analysis Report"
+title: "Comprehensive data analysis report"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Data Analysis Report}
+  %\VignetteIndexEntry{Comprehensive data analysis report}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,8 +16,9 @@ knitr::opts_chunk$set(
 
 This document contains the entire data analysis pipeline 
 aphantasiaCognitiveClustering was built for and the associated results reported
-in the article "*Uncovering spatial and verbal cognitive profiles in aphantasia
-through unsupervised clustering*" (Delem et al., 2025). 
+in the article "*Beyond visual imagery: Unsupervised clustering reveals spatial 
+and verbal cognitive profiles in aphantasia and typical imagery*" 
+(Delem et al., 2025). 
 
 The main dataset used for the analysis is included in the package as the
 `study_data` data frame.
@@ -126,7 +127,13 @@ package to plot half-violins, while `plot_score_radars()` uses the
 charts. The `scale_vars()` function is used to rescale variables between 0 and 1 
 to plot them easily on the same scale.
 
-```{r plot_score_violins_groups, fig.width=7, fig.height=3.5}
+```{r}
+#| label: plot_score_violins_groups
+#| fig.width: 7
+#| fig.height: 3.5
+#| fig.alt: > 
+#|  Violin plots of the original score variables by VVIQ group.
+
 study_data |> 
   scale_vars() |> 
   get_longer() |>
@@ -154,7 +161,14 @@ object. Two plotting functions are provided to visualise the results,
 the graph visualisation of the correlations with a specific overlapped layout
 using the [patchwork](https://cran.r-project.org/package=patchwork) package.
 
-```{r correlations, fig.width=7, fig.height=5, eval = TRUE}
+```{r}
+#| label: correlations
+#| fig.width: 7
+#| fig.height: 5
+#| fig.alt: > 
+#|  Joint plot of the correlation matrix and graph of the partial correlations
+#|  between the study variables.
+
 study_data |> correlate_vars(partial = TRUE) |> plot_score_cor_joint()
 ```
 
@@ -181,7 +195,14 @@ Information Criterion (BIC) implemented in the mclust package. The
 [factoextra](https://cran.r-project.org/package=factoextra) to represent the
 results of this model comparison visually.
 
-```{r plot_bic, fig.width=5, fig.height=4.5}
+```{r}
+#| label: plot_bic
+#| fig.width: 5
+#| fig.height: 4.5
+#| fig.alt: > 
+#|  Plot of the BIC values for different clustering models and numbers of
+#|  clusters.
+
 study_data |> cluster_selected_vars() |> plot_clusters_bic()
 ```
 
@@ -216,7 +237,13 @@ dividing the latter into two "sub-clusters", we created a new `subcluster`
 variable to analyse. The radar charts are a convenient way to visualise the
 scores of the clusters and sub-clusters on the reduced variables:
 
-```{r plot_score_radars_clusters, fig.width=7, fig.height=3.5}
+```{r}
+#| label: plot_score_radars_clusters
+#| fig.width: 7
+#| fig.height: 3.5
+#| fig.alt: > 
+#|  Radar charts of the clusters (left) and subclusters (right) on the reduced
+#|  variables.
 df_merged_long_reduced <- 
   df_merged |> 
   scale_vars() |> 

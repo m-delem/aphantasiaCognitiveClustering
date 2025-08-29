@@ -23,10 +23,11 @@ knitr::opts_chunk$set(
 
 aphantasiaCognitiveClustering is a data analysis project disguised as an R
 package. It contains the code and data to reproduce the analyses presented
-in the paper "*Uncovering spatial and verbal cognitive profiles in aphantasia 
-through unsupervised clustering*" by Delem et al. (2025, *in review*). The
+in the paper "*Beyond visual imagery: Unsupervised clustering reveals spatial 
+and verbal cognitive profiles in aphantasia and typical imagery*" by Delem et al. (2025, *in review*). The
 complete study materials are available in [this OSF
-project](https://osf.io/7vsx6/).
+project](https://osf.io/7vsx6/) and the reproducible manuscript can be found
+[in the package documentation](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html).
 
 The R package structure was chosen to facilitate the sharing of the code and 
 data with the scientific community, and to make it easy to reproduce the 
@@ -99,8 +100,8 @@ Finally, a suite of functions is provided to visualise the results of the
 analyses, such as `plot_score_violins()`, `plot_score_radars()`,
 `plot_score_cor_matrix()`, etc.
 
-See [the main vignette](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/aphantasiaCognitiveClustering.html) 
-for the complete data analysis report this package was built for.
+See the [complete data analysis report](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html) 
+this package was built for.
 
   
 

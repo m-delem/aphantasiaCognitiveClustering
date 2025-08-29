@@ -45,6 +45,7 @@ Suggests:
     knitr,
     logspline (>= 2.1.22),
     patchwork,
+    quarto,
     rmarkdown,
     rstanarm (>= 2.32.1),
     see (>= 0.11.0),
@@ -53,5 +54,8 @@ Suggests:
     superb (>= 0.95.19),
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr,
+    quarto
 URL: https://m-delem.github.io/aphantasiaCognitiveClustering/, https://github.com/m-delem/aphantasiaCognitiveClustering
+Config/Needs/website: rmarkdown

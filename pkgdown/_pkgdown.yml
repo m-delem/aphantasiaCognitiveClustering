@@ -5,6 +5,7 @@ template:
   bslib:
     base_font: {google: "Montserrat"}
     heading_font: {google: "DM Sans"}
+
 reference:
 - title: "R objects"
   contents:
@@ -33,3 +34,13 @@ reference:
   - add_significance_geoms
   - starts_with("plot_")
   - save_ggplot
+
+articles:
+- title: "Reproducible manuscript"
+  navbar: ~
+  contents:
+  - manuscript
+- title: "Comprehensive analysis report"
+  navbar: ~
+  contents:
+  - analysis_report

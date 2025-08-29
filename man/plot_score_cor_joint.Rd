@@ -4,11 +4,34 @@
 \alias{plot_score_cor_joint}
 \title{Create a joint matrix + graph correlation figure}
 \usage{
-plot_score_cor_joint(correlations)
+plot_score_cor_joint(
+  correlations,
+  size_axis = 6,
+  matrix_text = 5,
+  shape = 21,
+  stroke = 0.1,
+  node_size = 14,
+  node_text_size = 5,
+  label_text_size = 2
+)
 }
 \arguments{
 \item{correlations}{A data frame containing the correlations, typically the
 output of \code{\link[=correlate_vars]{correlate_vars()}}.}
+
+\item{size_axis}{Size of the axis text in points. Default is 6.}
+
+\item{matrix_text}{Size of the text in the correlation matrix. Default is 5.}
+
+\item{shape}{Shape of the nodes in the graph. Default is 21 (circle).}
+
+\item{stroke}{Stroke width of the nodes. Default is 0.1.}
+
+\item{node_size}{Size of the nodes in the graph. Default is 14.}
+
+\item{node_text_size}{Size of the text labels on the nodes. Default is 5.}
+
+\item{label_text_size}{Size of the text labels on the edges. Default is 2.}
 }
 \value{
 A ggplot2 object representing the joint plot of the correlation
