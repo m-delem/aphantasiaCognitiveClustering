@@ -938,6 +938,9 @@ association between clusters and levels of education ($log(BF_{10})$ =
 #| fig-width: 10
 #| fig-height: 5
 
+# Attaching superb is necessary to avoid bugs with the 1.0
+library(superb)
+
 df2_long <- 
   df2 |> 
   scale_vars() |> 

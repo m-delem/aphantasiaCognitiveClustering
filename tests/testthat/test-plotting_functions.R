@@ -1,3 +1,5 @@
+library(superb)
+
 test_that("ggplot2 wrappers work properly", {
   group_effects <-
     tibble::tibble(
