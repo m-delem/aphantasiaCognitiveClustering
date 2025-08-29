@@ -70,6 +70,7 @@ df_merged_long <- merge_clusters(
   scale_vars() |>
   get_longer()
 
+if (require("superb", quietly = TRUE)) {
 # Groups on the original variables
 p1 <-
   df_merged_long |>
@@ -95,4 +96,5 @@ if (require("patchwork", quietly = TRUE)) {
  print(p1 + p2)
  print(p3 + p4)
 } else print(p1)
+}
 }

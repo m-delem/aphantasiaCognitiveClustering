@@ -40,6 +40,7 @@
 #'   scale_vars() |>
 #'   get_longer()
 #'
+#' if (require("superb", quietly = TRUE)) {
 #' # Groups on the original variables
 #' p1 <-
 #'   df_merged_long |>
@@ -65,6 +66,7 @@
 #'  print(p1 + p2)
 #'  print(p3 + p4)
 #' } else print(p1)
+#' }
 plot_score_radars <- function(
     df,
     groups,
