@@ -39,6 +39,7 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link" href="articles/aphantasiaCognitiveClustering.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
@@ -76,7 +77,7 @@
 </div>
 <!-- badges: start -->
 
-<p>aphantasiaCognitiveClustering is a data analysis project disguised as an R package. It contains the code and data to reproduce the analyses presented in the paper “<em>Beyond visual imagery: Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery</em>” by Delem et al. (2025, <em>in review</em>). The complete study materials are available in <a href="https://osf.io/7vsx6/" class="external-link">this OSF project</a> and the reproducible manuscript can be found <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html">in the package documentation</a>.</p>
+<p>aphantasiaCognitiveClustering is a data analysis project disguised as an R package. It contains the code and data to reproduce the analyses presented in the paper “<em>Beyond visual imagery: Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery</em>” by Delem et al. (2025, <em>in review</em>). All study materials are available in <a href="https://osf.io/7vsx6/" class="external-link">this OSF project</a>, while the reproducible manuscript and complete analyses can be found in <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/">the package documentation</a> online.</p>
 <p>The R package structure was chosen to facilitate the sharing of the code and data with the scientific community, and to make it easy to reproduce the analyses. It is not intended to be a general-purpose package, but rather a collection of functions and data specific to this study (although many functions are reusable in their own right). The package development workflow (see <a href="https://r-pkgs.org/" class="external-link">this reference book</a>) is also a good way to ensure that the code is well-documented and tested, which is important for reproducibility in scientific research.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -95,38 +96,6 @@
 <span><span class="co">#&gt; in an article.</span></span>
 <span><span class="co">#&gt; See https://osf.io/7vsx6/ for the complete study materials.</span></span></code></pre></div>
 <p>… Which will load the package and make all its functions and data available in your R session.</p>
-</div>
-<div class="section level2">
-<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
-</h2>
-<p>The main dataset used for the analyses is provided in the package as <code>study_data</code>. It contains the data from the study in a tidy format, ready for analysis.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://m-delem.github.io/aphantasiaCognitiveClustering/">aphantasiaCognitiveClustering</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">study_data</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 6 × 27</span></span>
-<span><span class="co">#&gt;   id      age sex   group  education field field_code occupation occupation_code</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt; &lt;fct&gt;      &lt;fct&gt;      &lt;fct&gt;          </span></span>
-<span><span class="co">#&gt; 1 7210     25 m     Contr… Master    Soci… 3          Health     5              </span></span>
-<span><span class="co">#&gt; 2 7213     22 f     Contr… Master    Soci… 3          Student    3              </span></span>
-<span><span class="co">#&gt; 3 7238     52 f     Contr… Bachelor  Natu… 5          Informati… 8              </span></span>
-<span><span class="co">#&gt; 4 7242     48 f     Contr… Post-sec… Busi… 4          Business,… 7              </span></span>
-<span><span class="co">#&gt; 5 7254     37 f     Aphan… Doctorate Heal… 9          Health     5              </span></span>
-<span><span class="co">#&gt; 6 7257     36 m     Contr… Bachelor  Natu… 5          Business,… 7              </span></span>
-<span><span class="co">#&gt; # ℹ 18 more variables: vviq &lt;dbl&gt;, osivq_o &lt;dbl&gt;, osivq_s &lt;dbl&gt;, osivq_v &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   psiq_vis &lt;dbl&gt;, psiq_aud &lt;dbl&gt;, psiq_od &lt;dbl&gt;, psiq_gout &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   psiq_tou &lt;dbl&gt;, psiq_sens &lt;dbl&gt;, psiq_feel &lt;dbl&gt;, score_raven &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   score_sri &lt;dbl&gt;, span_spatial &lt;dbl&gt;, span_digit &lt;dbl&gt;, wcst_accuracy &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   score_similarities &lt;dbl&gt;, score_comprehension &lt;dbl&gt;</span></span></code></pre></div>
-<p>The main analyses can be roughly divided into three steps: modelling observed scores with two groups, clustering the sample based on a selection of variables, and exploring these clusters in the light of their scores. These core steps are taken care of by the following functions:</p>
-<ul>
-<li><p><code><a href="reference/get_association_models.html">get_association_models()</a></code>: This function computes Bayes Factors for association between the groups (aphantasia/control) and the <code>education</code>, <code>field</code>, and <code>occupation</code> variables in the dataset.</p></li>
-<li><p><code><a href="reference/get_full_model_table.html">get_full_model_table()</a></code>: This function fits Bayesian models to the observed variables, predicting them with the two groups (aphantasia/control) and the age as a covariate. It returns a data frame summarising the model results for each variable.</p></li>
-<li><p><code><a href="reference/correlate_vars.html">correlate_vars()</a></code>: This function computes the correlation matrix of the observed variables, returning a data frame with the correlations and their significance levels. It allowed to identify the variables that were most relevant for clustering.</p></li>
-<li><p><code><a href="reference/cluster_selected_vars.html">cluster_selected_vars()</a></code>: This function performs clustering on a selection of variables, returning a data frame with the cluster assignments for each participant. We can then reuse <code><a href="reference/get_association_models.html">get_association_models()</a></code> and <code><a href="reference/get_full_model_table.html">get_full_model_table()</a></code> to fit new models with these clusters.</p></li>
-</ul>
-<p>Some transformations of the shape of the data are also required to prepare them for certain steps, which are handled by other functions in the package. Finally, a suite of functions is provided to visualise the results of the analyses, such as <code><a href="reference/plot_score_violins.html">plot_score_violins()</a></code>, <code><a href="reference/plot_score_radars.html">plot_score_radars()</a></code>, <code><a href="reference/plot_score_cor_matrix.html">plot_score_cor_matrix()</a></code>, etc.</p>
-<p>See the <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html">complete data analysis report</a> this package was built for.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
