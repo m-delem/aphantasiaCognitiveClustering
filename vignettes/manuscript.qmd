@@ -39,7 +39,7 @@ bibliography: "references.bib"
 csl: "apa.csl"
 ---
 
-# Beyond visual imagery: Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery {.unnumbered}
+# Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery {.unnumbered}
 
 **Keywords**: aphantasia, mental imagery, individual differences, cognitive
 profiles, reasoning, working memory, unsupervised clustering

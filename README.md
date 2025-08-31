@@ -13,10 +13,11 @@ coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badg
 
 aphantasiaCognitiveClustering is a data analysis project disguised as an
 R package. It contains the code and data to reproduce the analyses
-presented in the paper “*Beyond visual imagery: Unsupervised clustering
-reveals spatial and verbal cognitive profiles in aphantasia and typical
-imagery*” by Delem et al. (2025, *in review*). All study materials are
-available in [this OSF project](https://osf.io/7vsx6/), while the
+presented in the paper “*Unsupervised clustering reveals spatial and
+verbal cognitive profiles in aphantasia and typical imagery*” by Delem
+et al. (2025, *in review*). You can read the preprint
+[here](https://doi.org/10.31219/osf.io/ucyb5_v2). All study materials
+are available in [this OSF project](https://osf.io/7vsx6/), while the
 reproducible manuscript and complete analyses can be found in [the
 package
 documentation](https://m-delem.github.io/aphantasiaCognitiveClustering/)

@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 This document contains the entire data analysis pipeline 
 aphantasiaCognitiveClustering was built for and the associated results reported
-in the article "*Beyond visual imagery: Unsupervised clustering reveals spatial 
+in the article "*Unsupervised clustering reveals spatial 
 and verbal cognitive profiles in aphantasia and typical imagery*" 
 (Delem et al., 2025). 
 

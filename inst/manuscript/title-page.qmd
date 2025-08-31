@@ -1,30 +1,6 @@
 ---
-title: "Uncovering spatial and verbal cognitive profiles in aphantasia through 
-  unsupervised clustering"
-abstract: "Mental images are a ubiquitous phenomenon for many people. In recent 
-  years, attention has focused on a condition defined by the absence of mental 
-  images - aphantasia. Individuals with aphantasia are found to perform as well 
-  as typical imagers in most areas. Interestingly, several studies have proposed 
-  that individuals with aphantasia might have a more 'semantic and abstract' 
-  mode of functioning. The present study aims to better understand the cognitive 
-  profile of individuals with aphantasia, by examining their performance 
-  regarding semantic and/or abstract processing. To that end, 45 participants 
-  with aphantasia and 51 controls completed questionnaires and behavioural tasks 
-  assessing sensory and spatial imagery, verbal strategies, verbal and 
-  non-verbal reasoning, and verbal and spatial working memory. Initial 
-  comparisons suggested very few differences between individuals with aphantasia 
-  and controls. However, an unsupervised clustering algorithm revealed three 
-  clusters focusing respectively on visual imagery, spatial imagery and verbal 
-  strategies, and two very distinct profiles of individuals with aphantasia 
-  among these clusters. The first profile had low visual imagery but maintained 
-  multisensory imagery, and had higher spatial imagery; the other had low 
-  imagery across all sensory modalities, and focused on verbal processing. This 
-  study shows that individuals with aphantasia should not be systematically 
-  classified based on visual imagery only, but characterised according to 
-  various aspects of their cognitive profile. This multifaceted approach could 
-  provide a balanced view of the benefits and drawbacks of mental images and 
-  help us to understand the mechanisms underlying the spectrum of individual 
-  differences in representational formats."
+title: "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery"
+abstract: "Mental imagery is a ubiquitous phenomenon for many people. Its absence - aphantasia - has recently attracted increasing scientific interest. Individuals with aphantasia are found to perform as well as typical imagers in most areas. Several studies have proposed that individuals with aphantasia might have a more 'semantic and abstract' mode of functioning. The present study aimed to better understand the cognitive profile of individuals with aphantasia by examining their performance regarding semantic and abstract processing. To that end, 45 participants with aphantasia and 51 controls completed questionnaires and behavioural tasks assessing sensory and spatial imagery, verbal strategies, verbal and non-verbal reasoning, and verbal and spatial working memory. Initial group comparisons revealed minimal differences. Rather than limiting our investigation to predefined group comparisons, we then adopted a trans-categorical, data-driven approach to uncover latent cognitive profiles based on task performance and subjective reports. Unsupervised clustering across the full sample revealed three clusters of cognitive profiles centred respectively on visual imagery, spatial imagery and verbal strategies. Crucially, individuals with aphantasia were distributed across two of these profiles. One showed low visual imagery but maintained multisensory imagery and high spatial imagery, while the other displayed low imagery across all sensory modalities and stronger reliance on verbal processing. These findings reveal significant heterogeneity within both aphantasia and control groups, extending beyond differences in visual imagery. They highlight the importance of considering spatial and verbal cognitive dimensions alongside visual phenomenology. By identifying cognitive profiles that transcend traditional imagery classifications, our results support a multidimensional framework for understanding how individual differences in mental representation relate to behaviour."
 authors: 
   - name: Maël Delem
     orcid: 0009-0005-8518-1991
@@ -64,8 +40,8 @@ toc: false
 echo: false
 format: docx
 reference-doc: "custom-reference-doc.docx"
-bibliography: "../bibliography/references.bib" 
-csl: "../bibliography/apa.csl"
+bibliography: "references.bib" 
+csl: "apa.csl"
 filters:
   - authors-block
 ---
