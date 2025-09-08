@@ -30,5 +30,6 @@ ignore_unused_imports <- function() {
   crayon::underline         # for glue_col
   logspline::dlogspline     # for emmeans
   sessioninfo::session_info # for RMD check
+  quarto::quarto_render     # for RMD check
   return(NULL)
 }

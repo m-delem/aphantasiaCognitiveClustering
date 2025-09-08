@@ -12,3 +12,4 @@
 ^\.github$
 ^vignettes/articles$
 ^inst/manuscript$
+^vignettes/.quarto$

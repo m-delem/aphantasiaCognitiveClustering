@@ -57,4 +57,4 @@ analyses, such as `plot_score_violins()`, `plot_score_radars()`,
 `plot_score_cor_matrix()`, etc.
 
 See the [complete data analysis report](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html) 
-this package was built for or the [reproducible manuscript](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html) it led to.
+this package was built for or the [reproducible manuscript](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html) it led to.

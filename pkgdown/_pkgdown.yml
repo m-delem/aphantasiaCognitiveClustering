@@ -39,7 +39,7 @@ articles:
 - title: "Reproducible manuscript"
   navbar: ~
   contents:
-  - manuscript
+  - articles/manuscript
 - title: "Comprehensive analysis report"
   navbar: ~
   contents:
