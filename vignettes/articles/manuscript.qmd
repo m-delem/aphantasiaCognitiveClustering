@@ -44,8 +44,6 @@ csl: "apa.csl"
 **Keywords**: aphantasia, mental imagery, individual differences, cognitive
 profiles, reasoning, working memory, unsupervised clustering
 
-
-
 # Introduction
 
 Visual imagery, commonly referred to as "seeing with the mind's eye", designates
@@ -63,9 +61,10 @@ identified potential deficits associated with it. Specifically, the condition
 has been associated with a reduction in autobiographical memory
 [@dawesCognitiveProfileMultisensory2020; @dawesMemoriesBlindMind2022;
 @miltonBehavioralNeuralSignatures2021;
-@monzelHippocampaloccipitalConnectivityReflects2023], lack of temporal and
-future imagination [@miltonBehavioralNeuralSignatures2021], increased
-prosopagnosia [@miltonBehavioralNeuralSignatures2021;
+@monzelHippocampaloccipitalConnectivityReflects2023], lack of atemporal and
+future imagination [@miltonBehavioralNeuralSignatures2021], increased face
+recognition
+difficulties [@miltonBehavioralNeuralSignatures2021;
 @palermoCongenitalLackExtraordinary2022;
 @zemanPhantasiaPsychologicalSignificance2020], reduced dreams
 [@dawesCognitiveProfileMultisensory2020], or decreased motor simulation
@@ -97,12 +96,13 @@ Drawing on the patterns emerging from their large-scale exploratory survey,
 @zemanPhantasiaPsychologicalSignificance2020 proposed a broad hypothesis that,
 whereas hyperphantasia might be characterized by an episodic and sensorily-rich
 mode of thinking, aphantasia might be characterized by a more semantic and
-fact-oriented approach. The results and conclusions of
-@zemanPhantasiaPsychologicalSignificance2020 are very similar to the
-Object-Spatial-Verbal model of cognitive styles developed by
-@blazhenkovaNewObjectspatialverbalCognitive2009 and its associated questionnaire
-(Object-Spatial Imagery and Verbal Questionnaire, OSIVQ). Based on behavioural
-and neuroimaging studies on healthy individuals
+fact-oriented approach. The visual/abstract polarity in thinking styles
+reflected in career preferences observed by 
+@zemanPhantasiaPsychologicalSignificance2020 is reminiscent of work on 
+the Object-Spatial-Verbal model of cognitive styles developed
+by @blazhenkovaNewObjectspatialverbalCognitive2009 and its associated
+questionnaire (Object-Spatial Imagery and Verbal Questionnaire, OSIVQ). Based on
+behavioural and neuroimaging studies on healthy individuals
 [@kosslynCognitiveNeuroscienceMental1995; @wallaceImageryVividnessHypnotic1990;
 @kozhevnikovRevisingVisualizerVerbalizerDimension2002] and neuropsychological
 studies of brain-damaged patients [@farahCaseStudyMental1988;
@@ -154,7 +154,13 @@ thinking could therefore be distributed across several dimensions, including
 visual-object or spatial representation, but potentially extending to verbal and
 semantic domains. The verbal (or "propositional") aspect of representations and
 cognitive strategies, although often mentioned as a potential candidate for
-alternative strategies in visual aphantasia, has scarcely been studied. The
+alternative strategies in visual aphantasia, has scarcely been studied. Previous articles that have examined the relevance of cognitive style models
+for understanding aphantasia have focused on the object/spatial
+dissociation [@blazhenkovaTwoEyesBlind2019;
+@palermoCongenitalLackExtraordinary2022] or the visual/verbal
+dissociation [@beranAssessingAphantasiaPrevalence2023;
+@takahashiDiversityAphantasiaRevealed2023] but none so far have considered all
+three dimensions simultaneously. The
 Object-Spatial-Verbal model of cognitive styles could allow to study verbal
 representations in a coherent framework alongside visual and spatial imagery and
 shed light on the cognitive strategies of individuals with aphantasia.
@@ -187,11 +193,12 @@ forward the very general hypothesis that if individuals with aphantasia have
 distinct verbal cognitive profiles, they should have very good reading
 comprehension skills. However, some studies have established a positive
 correlation between reading comprehension and visual mental imagery [e.g.,
-@suggateMentalImagerySkill2022], suggesting a central role for the latter. To
-date no specific study of reading comprehension in an ecological context in
-aphantasia could provide a definitive answer as to the advantages or
-disadvantages of aphantasia in complex reading tasks involving verbal skills,
-working memory and mental imagery. Finally, we hypothesised that the performance
+@suggateMentalImagerySkill2022], suggesting a central role for the latter. Although similar reading habits have been observed in people with aphantasia
+and those with typical imagery [@speedRoleVisualImagery2024], no studies have yet been conducted on reading comprehension in an ecological
+context in people with aphantasia. Such research could
+provide a clearer picture of the advantages or disadvantages of aphantasia in
+complex reading tasks involving verbal skills, working memory and mental
+imagery. Finally, we hypothesised that the performance
 of individuals with aphantasia in tasks supposed to require visual imagery might
 be linked to a greater flexibility in switching to alternative strategies (e.g.
 propositional, motor, etc.). In this case, they should be characterised by
@@ -208,14 +215,28 @@ questionnaires and behavioural tasks to assess visual imagery, spatial imagery,
 verbal strategies, spatial, verbal and non-verbal reasoning, verbal and
 visuo-spatial working memory, reading comprehension, and executive functions.
 Based on previous work showing very few differences in cognitive performance
-between individuals with aphantasia and controls [@keoghVisualWorkingMemory2021;
+between individuals with aphantasia and controls in memory
+tasks [@keoghVisualWorkingMemory2021;
 @pounderOnlyMinimalDifferences2022; @knightMemoryImageryNo2022], we expected
 that dividing the participants into two groups according to visual imagery
 ability would not fully explain substantial differences in task performance.
 Thus, we planned to explore the hypothesis of hidden sub-groups within the
-sample using a data-driven unsupervised clustering method. This analysis
-included all measures of cognitive abilities to assess similarities and
-differences between participants. The proposed data analysis plan resulted in
+sample using a data-driven unsupervised clustering method. This analysis was trans-categorical (including
+both groups) and included all measures of cognitive abilities
+to assess similarities and differences between participants beyond visual
+imagery. By trans-categorical, we refer to an approach that
+goes beyond predefined "diagnostic" categories to examine individual variability
+across continuous and multidimensional spaces. Instead of assuming that
+cognitive differences are fully explained by membership in an a priori group
+defined with a single variable (aphantasic vs. typical imagery), this approach
+considers profiles as overlapping and seeks latent structures or emergent
+clusters that cut across categories using multiple variables. For example,
+characteristic strengths in spatial or verbal reasoning may appear in both
+individuals with and without aphantasia, suggesting that these traits are not
+restricted to one group but distributed along continua. This framework is
+particularly relevant in cognitive psychology, where constructs such as imagery,
+memory, and reasoning interact and vary from one individual to another,
+regardless of predefined boundaries. The proposed data analysis plan resulted in
 clusters characterized by their visual, spatial, and verbal cognitive styles,
 which were able to explain task performance. In the light of these patterns, we
 then discuss the potential of the Object-Spatial-Verbal model for understanding
@@ -234,14 +255,16 @@ of the participants reported to have any known reading disorders. They were
 recruited online both on groups unrelated to mental imagery (social networks,
 French cognitive science information network, etc.) and on groups dedicated to
 aphantasia and visual imagery. The study link was sent to participants who
-volunteered by contacting the team by email. All procedures performed in these
-experiments were in accordance with the ethical standards of the institutional
-research committee and with the Helsinki declaration and its later amendments or
-comparable ethical standards. Informed consent was obtained from all individual
+volunteered by contacting the team by email. The study was carried out
+following the recommendations of the French Law (Loi Jardé n◦2012- 300), in
+accordance with the ethical standards of the institutional research committee
+and with the Declaration of Helsinki and its later
+amendments. Informed consent was obtained from all individual
 participants included in the study . Participation was without compensation. As
 the study was exploratory, the sample size was not determined *a priori*. Only
 data from participants who completed all the tasks were included in the
-analyses. Of the 1200 people who opened the link to the study, 96 completed all
+analyses. Participants who skipped a task extremely fast were removed from the
+data. Of the 1200 people who opened the link to the study, 96 completed all
 the tasks, making up the final sample. The questionnaire statistics are detailed
 in the results part below.
 
@@ -255,8 +278,10 @@ The VVIQ is a 16-item self-report scale that asks participants to imagine a
 person and several scenes and to rate the vividness of these mental images using
 a 5-point scale ranging from 1 ("*No imagery at all, you just know you're
 thinking about the object*") to 5 ("*Perfectly clear and as vivid as normal
-vision*"). Scores range from 16 to 80. The total score of 32, conventionally
-used as a threshold to define aphantasia, is equivalent to a score of 2 ("*vague
+vision*"). Scores range from 16 to 80. The total score of 32, often
+used as a threshold to define aphantasia [e.g.,
+@dancePrevalenceAphantasiaImagery2022; @dawesCognitiveProfileMultisensory2020;
+@keoghVisualWorkingMemory2021; @speedRoleVisualImagery2024], is equivalent to a score of 2 ("*vague
 and faint*") for each item in the questionnaire. The internal reliability
 (Cronbach’s $\alpha$) of the VVIQ is .88 [@mckelvieVVIQPsychometricTest1995].
 
@@ -440,8 +465,8 @@ the packages *ggplot2* [@ggplot22016], *factoextra* [@R-factoextra], *see*
 
 Bayesian modelling used throughout the analyses was conducted using the R
 packages *rstanarm* [@R-rstanarm], *BayesFactor* [@R-BayesFactor] and
-*bayestestR* [@bayestestR2019], and unless otherwise stated default parameter
-values were used. The R package *emmeans* [@R-emmeans] was used for marginal
+*bayestestR* [@bayestestR2019], using default weakly informative
+priors. The R package *emmeans* [@R-emmeans] was used for marginal
 estimates and contrast analyses. For all tests, the statistic reported,
 $log(BF_{10})$, quantifies the relative "weight of evidence" in favour of the
 hypothesis $H_{1}$ (e.g., the effect of a factor), against the null hypothesis
@@ -630,9 +655,10 @@ subcl_spn_ba_a_bf <- subcl_log_bfs[139]
 The final sample comprised 96 participants ($M_{age}$ = `r mean_age`, $SD_{age}$
 = `r sd_age`, range$_{age}$ = \[`r min_age`, `r max_age`\], `r n_fem` females,
 `r n_men` males, `r n_oth` another gender). The most widely used criterion in
-studies on aphantasia to identify the condition is a score inferior to 32 on the
-Vividness of Visual Imagery Questionnaire [@marksVisualImageryDifferences1973].
-After applying this criterion, we identified `r n_aph` individuals with
+studies on aphantasia to identify the condition is a score inferior to 32 on the VVIQ, a threshold often used in the
+literature [e.g., @dancePrevalenceAphantasiaImagery2022;
+@dawesCognitiveProfileMultisensory2020; @keoghVisualWorkingMemory2021;
+@speedRoleVisualImagery2024]. There were `r n_aph` individuals with
 aphantasia in the sample ($M_{VVIQ}$ = `r m_vviq_aph`, $SD_{VVIQ}$ =
 `r sd_vviq_aph`, $M_{age}$ = `r m_age_aph`, $SD_{age}$ = `r sd_age_aph`,
 `r n_aph_f` females, `r n_aph_m` males) and 51 controls ($M_{VVIQ}$ =
@@ -766,7 +792,7 @@ We computed all the partial correlations between the 18 variables (see
 @fig-corrs) and chose to merge the significantly correlated variables after a
 Bonferroni correction (multiplying the *p*-values by the number of comparisons).
 This resulted in the creation of four new reduced variables. First, the three
-subscales related to visual imagery, i.e., the VVIQ, the OSIVQ-Visual and Psi-Q
+subscales related to visual imagery, i.e., the VVIQ, the OSIVQ-Object and Psi-Q
 Visual, were associated (VVIQ - Psi-Q Visual: *r* = `r cor_vviq_psi_v`, *p* $<$
 0.001; OSIVQ-Object - Psi-Q Visual: *r* = `r cor_osv_o_psi_v`, *p* $<$ 0.05).
 They have been standardised between 0 and 1, weighted by their number of items
@@ -1112,8 +1138,8 @@ relied heavily on verbal strategies, with a preference for linguistic forms of
 information processing. The distinction between “multisensory aphantasia” and
 “visual-only aphantasia” aligns with a prior clustering study conducted by
 @dawesMultisensorySubtypesAphantasia2023, which highlighted the heterogeneity of
-aphantasia across larger samples. However, our findings uncover another relevant
-dimension by linking these imagery profiles to different cognitive styles:
+aphantasia across larger samples. However, our findings show another relevant
+dimension by linking these aphantasia profiles to different cognitive styles:
 verbal versus spatial. The strong performance of spatialisers on spatial tasks
 supports prior work suggesting that many classic "mental imagery tasks", such as
 the Mental Rotation Task [@shepardMentalRotationThreeDimensional1971], or the
@@ -1165,11 +1191,25 @@ offer a potential framework to explore these compensatory mechanisms further,
 several limitations must be acknowledged. The use of an unsupervised clustering
 algorithm allowed for the discovery of hidden structures in the data, but the
 findings remain exploratory and require replication in larger, more diverse
-samples. Moreover, the tasks used to assess mental imagery and reasoning were
+samples. Although the use of a trans-categorical approach (clustering on a
+mixed sample of people with aphantasia or typical imagery) allowed us to reveal
+relevant dimensions of cognitive profiles, there may be more nuanced patterns in
+aphantasia that this study was unable to capture due to the sample
+size. Moreover, the tasks used to assess mental imagery and reasoning were
 selected to provide broad coverage of cognitive abilities but may not have
 captured the full complexity of these constructs. Future research should aim to
 refine the measurement of visual, spatial, and verbal imagery through the use of
-tasks specifically designed to disentangle these dimensions. Furthermore, it
+tasks specifically designed to disentangle these dimensions. For instance, in relation to the OSIVQ, the Degraded Pictures
+Task [@kozhevnikovSpatialObjectVisualizers2005;
+@blazhenkovaNewObjectspatialverbalCognitive2009;
+@kozhevnikovTradeoffObjectSpatial2010], the Paper Folding
+Test [@kozhevnikovSpatialObjectVisualizers2005;
+@blazhenkovaNewObjectspatialverbalCognitive2009;
+@haciomerogluObjectSpatialVisualizationVerbal2016;
+@hofflerMoreEvidenceThree2017] and vocabulary tasks
+[@blazhenkovaNewObjectspatialverbalCognitive2009;
+@bledValidationFrenchVersion2021] have been shown to correlate with object,
+spatial and verbal scores, respectively. Furthermore, it
 remains to be seen whether the profiles identified here can be validated with
 other behavioural and neural phenomena, such as differences in brain activity
 during visual or spatial imagery tasks.
@@ -1210,14 +1250,10 @@ MD. Writing - Review & Editing: GP, DC, EC.
 
 None.
 
-
-
 # References {.unnumbered}
 
 ::: {#refs}
 :::
-
-
 
 # Tables {.unnumbered}
 
@@ -1246,8 +1282,6 @@ models$group_models |>
   ) |> 
   knitr::kable()
 ```
-
-
 
 ```{r}
 #| label: tbl-c-contrasts
