@@ -1,12 +1,11 @@
 Package: aphantasiaCognitiveClustering
-Title: Data Analysis for "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering"
+Title: Data Analysis for "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery"
 Version: 1.0
 Authors@R: 
     person("Maël", "Delem", , "mael.delem@pm.me", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0005-8518-1991"))
 Description: This package contains all the code to reproduce the analyses 
-    reported in the article "Uncovering Spatial and Verbal Cognitive Profiles in
-    Aphantasia Through Unsupervised Clustering".
+    reported in the article "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery".
 Imports:
     crayon,
     dplyr (>= 1.1.4),
