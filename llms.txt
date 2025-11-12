@@ -1,0 +1,143 @@
+# aphantasiaCognitiveClustering
+
+aphantasiaCognitiveClustering is a data analysis project wrapped in an R
+package for reproducibility[¹](#fn1). It contains the code and data to
+reproduce the analyses presented in the article “[*Unsupervised
+clustering reveals spatial and verbal cognitive profiles in aphantasia
+and typical
+imagery*](https://doi.org/10.1016/j.neuropsychologia.2025.109279)”. You
+can read the accepted manuscript for free
+[here](https://doi.org/10.31219/osf.io/ucyb5_v4). All study materials
+are available on the Open Science Framework
+[here](https://osf.io/7vsx6/).
+
+The online documentation of the package contains [an in-depth data
+analysis
+report](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html)
+describing how to use the package to reproduce the analyses, as well as
+a [reproducible version of the
+manuscript](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html)
+with all numerical results generated directly from the package and
+rendered using [Quarto](https://quarto.org).
+
+## Installation
+
+You can install the development version of aphantasiaCognitiveClustering
+from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("m-delem/aphantasiaCognitiveClustering")
+```
+
+Alternatively, you can clone the repository, launch the R project in
+RStudio by opening the `aphantasiaCognitiveClustering.Rproj` file and
+run the following command:
+
+``` r
+devtools::load_all()
+#> ℹ Loading aphantasiaCognitiveClustering
+#> Welcome to aphantasiaCognitiveClustering.
+#> See https://osf.io/7vsx6/ for the associated study.
+```
+
+… Which will load the package and make all its functions and data
+available in your R session.
+
+------------------------------------------------------------------------
+
+1.  The R package structure was chosen to facilitate the sharing of the
+    code and data with the scientific community, and to make it easy to
+    reproduce the analyses. It is not intended to be a general-purpose
+    package, but rather a collection of functions and data specific to
+    this study (although many functions are reusable in their own
+    right). The package development workflow (see [this reference
+    book](https://r-pkgs.org/)) is also a good way to ensure that the
+    code is well-documented and tested, which is important for
+    reproducibility in scientific research.
+
+# Package index
+
+## R objects
+
+- [`study_data`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/study_data.md)
+  : Study data retrieved from the OSF project
+- [`models_list`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/models_list.md)
+  : Models for all the variables predicted by Groups, Clusters and
+  Sub-clusters
+
+## Data manipulation
+
+- [`filter_study_variables()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/filter_study_variables.md)
+  :
+
+  Filter the `Variable` column of a long format data frame
+
+- [`format_association_table()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/format_association_table.md)
+  : Display the association table for a specific variable in a clean
+  format
+
+- [`get_longer()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/get_longer.md)
+  : Transform the main data frame to long format
+
+- [`merge_clusters()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/merge_clusters.md)
+  : Add the clustering and reduced variables to the main data frame
+
+- [`scale_vars()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/scale_vars.md)
+  : Scale original quantitative variables to a defined range
+
+- [`scale_reduce_vars()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/scale_reduce_vars.md)
+  : Reduce the number of variables to prepare for clustering
+
+## Modelling
+
+- [`cluster_selected_vars()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/cluster_selected_vars.md)
+  : Use Gaussian Mixture Models to cluster selected variables
+- [`fit_stan_glm()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/fit_stan_glm.md)
+  : Fit a stan_glm model with predefined parameters
+- [`get_association_models()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/get_association_models.md)
+  : Fit and report Bayes Factors for associations with education, fields
+  and occupations
+- [`get_bf_inclusion()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/get_bf_inclusion.md)
+  : Compute Bayes Factor for Inclusion for the groups and age covariate
+- [`get_contrast_bf()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/get_contrast_bf.md)
+  : Get contrasts between groups in a Bayesian model
+- [`get_full_model_table()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/get_full_model_table.md)
+  : Create a table summarising the models for each variable
+- [`get_mean_sd()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/get_mean_sd.md)
+  : Get the mean and standard deviation of a variable in a clean table
+- [`correlate_vars()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/correlate_vars.md)
+  : Correlate the original variables with a chosen method and correction
+
+## Plotting
+
+- [`add_significance_geoms()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/add_significance_geoms.md)
+  : Add significance label and line to a plot
+- [`plot_clusters_bic()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/plot_clusters_bic.md)
+  : Plot the comparison of Gaussian Mixture Models (GMM) BIC scores
+- [`plot_score_cor_graph()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/plot_score_cor_graph.md)
+  : Plot a correlation graph
+- [`plot_score_cor_joint()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/plot_score_cor_joint.md)
+  : Create a joint matrix + graph correlation figure
+- [`plot_score_cor_matrix()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/plot_score_cor_matrix.md)
+  : Plot a correlation matrix
+- [`plot_score_radars()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/plot_score_radars.md)
+  : Plot scaled score variables as radar charts
+- [`plot_score_violins()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/plot_score_violins.md)
+  : Plot the study variables' distributions as half-violins with point
+  averages and error bars.
+- [`save_ggplot()`](https://m-delem.github.io/aphantasiaCognitiveClustering/reference/save_ggplot.md)
+  : Custom ggsave wrapper set with Nature's formatting guidelines
+  (width-locked)
+
+# Articles
+
+### Reproducible manuscript
+
+- [Reproducible
+  manuscript](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.md):
+
+### Comprehensive analysis report
+
+- [Comprehensive data analysis
+  report](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.md):

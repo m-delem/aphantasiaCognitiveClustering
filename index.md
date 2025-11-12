@@ -1,0 +1,57 @@
+# aphantasiaCognitiveClustering
+
+aphantasiaCognitiveClustering is a data analysis project wrapped in an R
+package for reproducibility[¹](#fn1). It contains the code and data to
+reproduce the analyses presented in the article “[*Unsupervised
+clustering reveals spatial and verbal cognitive profiles in aphantasia
+and typical
+imagery*](https://doi.org/10.1016/j.neuropsychologia.2025.109279)”. You
+can read the accepted manuscript for free
+[here](https://doi.org/10.31219/osf.io/ucyb5_v4). All study materials
+are available on the Open Science Framework
+[here](https://osf.io/7vsx6/).
+
+The online documentation of the package contains [an in-depth data
+analysis
+report](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html)
+describing how to use the package to reproduce the analyses, as well as
+a [reproducible version of the
+manuscript](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html)
+with all numerical results generated directly from the package and
+rendered using [Quarto](https://quarto.org).
+
+## Installation
+
+You can install the development version of aphantasiaCognitiveClustering
+from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("m-delem/aphantasiaCognitiveClustering")
+```
+
+Alternatively, you can clone the repository, launch the R project in
+RStudio by opening the `aphantasiaCognitiveClustering.Rproj` file and
+run the following command:
+
+``` r
+devtools::load_all()
+#> ℹ Loading aphantasiaCognitiveClustering
+#> Welcome to aphantasiaCognitiveClustering.
+#> See https://osf.io/7vsx6/ for the associated study.
+```
+
+… Which will load the package and make all its functions and data
+available in your R session.
+
+------------------------------------------------------------------------
+
+1.  The R package structure was chosen to facilitate the sharing of the
+    code and data with the scientific community, and to make it easy to
+    reproduce the analyses. It is not intended to be a general-purpose
+    package, but rather a collection of functions and data specific to
+    this study (although many functions are reusable in their own
+    right). The package development workflow (see [this reference
+    book](https://r-pkgs.org/)) is also a good way to ensure that the
+    code is well-documented and tested, which is important for
+    reproducibility in scientific research.
