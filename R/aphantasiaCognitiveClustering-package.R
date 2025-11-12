@@ -15,10 +15,7 @@ NULL
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage(glue::glue_col("{blue
   Welcome to {cyan aphantasiaCognitiveClustering}.
-  This is actually a data analysis project 'disguised' as a package.
-  It contains the code and data to reproduce the analyses presented
-  in an article.
-  See {magenta https://osf.io/7vsx6/} for the complete study materials.
+  See {magenta https://osf.io/7vsx6/} for the associated study.
   }",
   .literal = TRUE
   ))
