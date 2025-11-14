@@ -5,22 +5,20 @@
 
 <!-- badges: start -->
 
-[<img alt="alt_text" src="https://img.shields.io/badge/OSF-https://osf.io/7vsx6/-337AB7?logo=osf"/>](https://osf.io/7vsx6/)
-[![R-CMD-check](https://github.com/m-delem/aphantasiaCognitiveClustering/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-delem/aphantasiaCognitiveClustering/actions/workflows/R-CMD-check.yaml)
-[![Codecov test
-coverage](https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg)](https://app.codecov.io/gh/m-delem/aphantasiaCognitiveClustering)
+<a href="https://doi.org/10.17605/OSF.IO/7VSX6" target="_blank"><img alt="OSF badge" src="https://img.shields.io/badge/OSF-https://osf.io/7vsx6/-337AB7?logo=osf"/></a>
+<a href="https://m-delem.github.io/aphantasiaCognitiveClustering/" target="_blank"><img alt="Docs badge" src="https://img.shields.io/badge/Documentation-website-009e73?style=flat&logo=Google%20Docs&logoColor=009e73&logoSize=auto"/></a>
+<a href="https://app.codecov.io/gh/m-delem/aphantasiaCognitiveClustering" target="_blank"><img alt="Codecov test coverage" src="https://codecov.io/gh/m-delem/aphantasiaCognitiveClustering/graph/badge.svg" /></a>
+<a href="https://doi.org/10.1016/j.neuropsychologia.2025.109279" target="_blank"><img alt="DOI badge" src="https://img.shields.io/badge/Published%20article-white?style=flat&logo=Elsevier&logoSize=auto"/></a>
 <!-- badges: end -->
 
 aphantasiaCognitiveClustering is a data analysis project wrapped in an R
 package for reproducibility[^1]. It contains the code and data to
-reproduce the analyses presented in the article “[*Unsupervised
+reproduce the analyses presented in the article “*Unsupervised
 clustering reveals spatial and verbal cognitive profiles in aphantasia
-and typical
-imagery*](https://doi.org/10.1016/j.neuropsychologia.2025.109279)”. You
-can read the accepted manuscript for free
-[here](https://doi.org/10.31219/osf.io/ucyb5_v4). All study materials
-are available on the Open Science Framework
-[here](https://osf.io/7vsx6/).
+and typical imagery*”. You can read the accepted manuscript for free
+<a href="https://doi.org/10.31219/osf.io/ucyb5_v4" target="_blank">here</a>.
+All study materials are available on the Open Science Framework
+<a href="https://doi.org/10.17605/OSF.IO/7VSX6" target="_blank">here</a>.
 
 The online documentation of the package contains [an in-depth data
 analysis
@@ -29,7 +27,7 @@ describing how to use the package to reproduce the analyses, as well as
 a [reproducible version of the
 manuscript](https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html)
 with all numerical results generated directly from the package and
-rendered using [Quarto](https://quarto.org).
+rendered using <a href="https://quarto.org" target="_blank">Quarto</a>.
 
 ## Installation
 
@@ -60,7 +58,8 @@ available in your R session.
     to reproduce the analyses. It is not intended to be a
     general-purpose package, but rather a collection of functions and
     data specific to this study (although many functions are reusable in
-    their own right). The package development workflow (see [this
-    reference book](https://r-pkgs.org/)) is also a good way to ensure
-    that the code is well-documented and tested, which is important for
-    reproducibility in scientific research.
+    their own right). The package development workflow (see
+    <a href="https://r-pkgs.org/" target="_blank">this reference
+    book</a>) is also a good way to ensure that the code is
+    well-documented and tested, which is important for reproducibility
+    in scientific research.
