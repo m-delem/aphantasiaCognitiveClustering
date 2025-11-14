@@ -2,14 +2,12 @@
 
 aphantasiaCognitiveClustering is a data analysis project wrapped in an R
 package for reproducibility[¹](#fn1). It contains the code and data to
-reproduce the analyses presented in the article “[*Unsupervised
+reproduce the analyses presented in the article “*Unsupervised
 clustering reveals spatial and verbal cognitive profiles in aphantasia
-and typical
-imagery*](https://doi.org/10.1016/j.neuropsychologia.2025.109279)”. You
-can read the accepted manuscript for free
+and typical imagery*”. You can read the accepted manuscript for free
 [here](https://doi.org/10.31219/osf.io/ucyb5_v4). All study materials
 are available on the Open Science Framework
-[here](https://osf.io/7vsx6/).
+[here](https://doi.org/10.17605/OSF.IO/7VSX6).
 
 The online documentation of the package contains [an in-depth data
 analysis
