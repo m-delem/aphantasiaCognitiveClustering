@@ -856,18 +856,18 @@ sessioninfo::session_info()
 #>  collate  C.UTF-8
 #>  ctype    C.UTF-8
 #>  tz       UTC
-#>  date     2025-11-14
+#>  date     2025-11-19
 #>  pandoc   3.1.11 @ /opt/hostedtoolcache/pandoc/3.1.11/x64/ (via rmarkdown)
 #>  quarto   1.8.26 @ /usr/local/bin/quarto
 #> 
 #> ─ Packages ───────────────────────────────────────────────────────────────────
 #>  ! package                       * version    date (UTC) lib source
 #>    abind                           1.4-8      2024-09-12 [1] RSPM
-#>    aphantasiaCognitiveClustering * 1.0        2025-11-14 [1] local
+#>    aphantasiaCognitiveClustering * 1.0        2025-11-19 [1] local
 #>    backports                       1.5.0      2024-05-23 [1] RSPM
 #>    BayesFactor                     0.9.12-4.7 2024-01-24 [1] RSPM
 #>    bayestestR                      0.17.0     2025-08-29 [1] RSPM
-#>    BiocManager                     1.30.26    2025-06-05 [1] RSPM
+#>    BiocManager                     1.30.27    2025-11-14 [1] RSPM
 #>    broom                           1.0.10     2025-09-13 [1] RSPM
 #>    bslib                           0.9.0      2025-01-30 [1] RSPM
 #>    cachem                          1.1.0      2024-05-16 [1] RSPM
@@ -893,7 +893,7 @@ sessioninfo::session_info()
 #>    fs                              1.6.6      2025-04-12 [1] RSPM
 #>    generics                        0.1.4      2025-05-09 [1] RSPM
 #>    ggforce                         0.5.0      2025-06-18 [1] RSPM
-#>    ggplot2                         4.0.0      2025-09-11 [1] RSPM
+#>    ggplot2                         4.0.1      2025-11-14 [1] RSPM
 #>    ggpubr                          0.6.2      2025-10-17 [1] RSPM
 #>    ggraph                          2.2.2      2025-08-24 [1] RSPM
 #>    ggrepel                         0.9.6      2024-09-07 [1] RSPM
@@ -948,7 +948,7 @@ sessioninfo::session_info()
 #>    rmarkdown                       2.30       2025-09-28 [1] RSPM
 #>    rrapply                         1.2.7      2024-06-26 [1] RSPM
 #>    rstatix                         0.7.3      2025-10-18 [1] RSPM
-#>    S7                              0.2.0      2024-11-07 [1] RSPM
+#>    S7                              0.2.1      2025-11-14 [1] RSPM
 #>    sass                            0.4.10     2025-04-11 [1] RSPM
 #>    scales                          1.4.0      2025-04-24 [1] RSPM
 #>    see                             0.12.0     2025-09-14 [1] RSPM

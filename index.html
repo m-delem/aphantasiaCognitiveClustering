@@ -39,7 +39,6 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item"><a class="nav-link" href="articles/aphantasiaCognitiveClustering.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
@@ -78,7 +77,16 @@
 <!-- badges: start -->
 
 <p>aphantasiaCognitiveClustering is a data analysis project wrapped in an R package for reproducibility<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;The R package structure was chosen to facilitate the sharing of the code and data with the scientific community, and to make it easy to reproduce the analyses. It is not intended to be a general-purpose package, but rather a collection of functions and data specific to this study (although many functions are reusable in their own right). The package development workflow (see &lt;a href="https://r-pkgs.org/" target="_blank" class="external-link"&gt;this reference book&lt;/a&gt;) is also a good way to ensure that the code is well-documented and tested, which is important for reproducibility in scientific research.&lt;/p&gt;'><sup>1</sup></a>. It contains the code and data to reproduce the analyses presented in the article “<em>Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery</em>”. You can read the accepted manuscript for free <a href="https://doi.org/10.31219/osf.io/ucyb5_v4" target="_blank" class="external-link">here</a>. All study materials are available on the Open Science Framework <a href="https://doi.org/10.17605/OSF.IO/7VSX6" target="_blank" class="external-link">here</a>.</p>
-<p>The online documentation of the package contains <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html">an in-depth data analysis report</a> describing how to use the package to reproduce the analyses, as well as a <a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html">reproducible version of the manuscript</a> with all numerical results generated directly from the package and rendered using <a href="https://quarto.org" target="_blank" class="external-link">Quarto</a>.</p>
+<div class="section level2">
+<h2 id="what-exactly-is-in-this-r-package">What exactly is in this R package?<a class="anchor" aria-label="anchor" href="#what-exactly-is-in-this-r-package"></a>
+</h2>
+<p>The package includes the preprocessed data ready for analysis in the form of a built-in dataset called <code>study_data</code> to make it easily accessible. The package comes with a set of functions for manipulating the data and reliably reproducing the analyses presented in the article. The data and the functions are documented in detail in the package website, which also includes:</p>
+<ul>
+<li><p><a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/analysis_report.html">A data analysis report describing how to use the package to reproduce all the analyses</a></p></li>
+<li><p><a href="https://m-delem.github.io/aphantasiaCognitiveClustering/articles/manuscript.html">A reproducible version of the manuscript</a> with all numerical results generated directly from the package and rendered using <a href="https://quarto.org" target="_blank" class="external-link">Quarto</a>.</p></li>
+</ul>
+<p>The source code for these notebooks is also available in the <code>vignettes/</code> folder of the package repository.</p>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -93,6 +101,52 @@
 <span><span class="co">#&gt; Welcome to aphantasiaCognitiveClustering.</span></span>
 <span><span class="co">#&gt; See https://osf.io/7vsx6/ for the associated study.</span></span></code></pre></div>
 <p>… Which will load the package and make all its functions and data available in your R session.</p>
+</div>
+<div class="section level2">
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<p>Below are some examples of how to use the data and functions from the package to recreate the graphs from the article.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://m-delem.github.io/aphantasiaCognitiveClustering/">aphantasiaCognitiveClustering</a></span><span class="op">)</span></span></code></pre></div>
+<p>Score comparisons between groups for all original variables:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">study_data</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/scale_vars.html">scale_vars</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/get_longer.html">get_longer</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/filter_study_variables.html">filter_study_variables</a></span><span class="op">(</span><span class="st">"original"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/plot_score_violins.html">plot_score_violins</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-plot_score_violins_groups-1.png" alt="Violin plots of the original score variables by VVIQ group.
+" width="100%"></p>
+<p>Correlation matrix and graph of the study variables:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">study_data</span> <span class="op">|&gt;</span> <span class="fu"><a href="reference/correlate_vars.html">correlate_vars</a></span><span class="op">(</span>partial <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="reference/plot_score_cor_joint.html">plot_score_cor_joint</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-plot_correlations-1.png" alt="Joint plot of the correlation matrix and graph of the partial correlations between the study variables." width="100%"></p>
+<p>Clustering and radar plots of the clusters:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="reference/merge_clusters.html">merge_clusters</a></span><span class="op">(</span></span>
+<span>    df_raw <span class="op">=</span> <span class="va">study_data</span>,</span>
+<span>    df_red <span class="op">=</span> <span class="fu"><a href="reference/scale_reduce_vars.html">scale_reduce_vars</a></span><span class="op">(</span><span class="va">study_data</span><span class="op">)</span>,</span>
+<span>    clustering <span class="op">=</span> <span class="fu"><a href="reference/cluster_selected_vars.html">cluster_selected_vars</a></span><span class="op">(</span><span class="va">study_data</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/scale_vars.html">scale_vars</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/get_longer.html">get_longer</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="reference/filter_study_variables.html">filter_study_variables</a></span><span class="op">(</span><span class="st">"reduced"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/plot_score_radars.html">plot_score_radars</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">Cluster</span>, r_off <span class="op">=</span> <span class="fl">6</span>, l_off <span class="op">=</span> <span class="fl">6</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="reference/plot_score_radars.html">plot_score_radars</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">Subcluster</span>, r_off <span class="op">=</span> <span class="fl">6</span>, l_off <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-plot_score_radars_clusters-1.png" alt="Radar charts of the clusters (left) and subclusters (right) on the reduced variables." width="100%"></p>
+<p>Visit the package website for detailed explanations of all the package features!</p>
+</div>
+<div class="section level2">
+<h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+</h2>
+<p>This GitHub repository is archived in <a href="https://doi.org/10.17605/OSF.IO/7VSX6" target="_blank" class="external-link"> the OSF project dedicated to the study</a>, which allowed to assign a permanent DOI to the code and data. Thus, if you use this code or data in your research, please cite the OSF project with one of the following:</p>
+<blockquote>
+<p>Delem, M., Cousineau, D., Cavalli, E., &amp; Plancher, G. (2025, November 19). Supplementary materials for ‘Unsupervised clustering reveals cognitive profiles in aphantasia’. <a href="https://doi.org/10.17605/OSF.IO/7VSX6" class="external-link uri">https://doi.org/10.17605/OSF.IO/7VSX6</a></p>
+</blockquote>
 </div>
 </div>
 

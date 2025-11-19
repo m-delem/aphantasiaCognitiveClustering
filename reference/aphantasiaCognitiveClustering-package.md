@@ -1,8 +1,8 @@
-# aphantasiaCognitiveClustering: Data Analysis for "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering"
+# aphantasiaCognitiveClustering: Data Analysis for "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery"
 
 This package contains all the code to reproduce the analyses reported in
-the article "Uncovering Spatial and Verbal Cognitive Profiles in
-Aphantasia Through Unsupervised Clustering".
+the article "Unsupervised clustering reveals spatial and verbal
+cognitive profiles in aphantasia and typical imagery".
 
 ## See also
 
