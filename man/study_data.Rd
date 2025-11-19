@@ -8,7 +8,8 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 96 rows and 27 columns.
 }
 \source{
-\url{https://osf.io/7vsx6/files/osfstorage}
+Data collected in the online experiment. See
+\url{https://osf.io/7vsx6/files/osfstorage}.
 }
 \usage{
 study_data
@@ -19,5 +20,37 @@ data has been preprocessed from the raw data files extracted from a JATOS
 server beforehand. The raw data is not bundled in the package to keep it
 lightweight, but the functions to extract it are available as internal
 functions and a code example is included in \code{data-raw/raw_data_extraction.R}.
+}
+\details{
+The dataset contains the following columns:
+\itemize{
+\item \code{id}: Participant ID
+\item \code{age}: Participant age
+\item \code{sex}: Participant sex
+\item \code{group}: Participant VVIQ group (Aphantasic/Control)
+\item \code{education}: Participant education level (ISCED classification)
+\item \code{field}: Participant field of study/work (ISCED-F classification)
+\item \code{field_code}: Participant field of study/work code (ISCED-F classification)
+\item \code{occupation}: Participant occupation field (ISCO classification)
+\item \code{occupation_code}: Participant occupation field code (ISCO classification)
+\item \code{vviq}: Vividness of Visual Imagery Questionnaire score
+\item \code{osivq_o}: Object imagery score from the OSIVQ questionnaire
+\item \code{osivq_s}: Spatial imagery score from the OSIVQ questionnaire
+\item \code{osivq_v}: Verbal score from the OSIVQ questionnaire
+\item \code{psiq_vis}: Psi-Q Visual imagery score
+\item \code{psiq_aud}: Psi-Q Auditory imagery score
+\item \code{psiq_od}: Psi-Q Olfactory imagery score
+\item \code{psiq_gout}: Psi-Q Gustatory imagery score
+\item \code{psiq_tou}: Psi-Q Tactile imagery score
+\item \code{psiq_sens}: Psi-Q Sensory imagery score
+\item \code{psiq_feel}: Psi-Q Feelings imagery score
+\item \code{score_raven}: Raven Matrices score
+\item \code{score_sri}: SRI score
+\item \code{span_digit}: Digit Span score
+\item \code{span_spatial}: Spatial Span score
+\item \code{score_similarities}: Similarities test score
+\item \code{wcst_accuracy}: Wisconsin Card Sorting Test accuracy score
+\item \code{score_comprehension}: Reading comprehension score
+}
 }
 \keyword{datasets}

@@ -4,11 +4,11 @@
 \name{aphantasiaCognitiveClustering-package}
 \alias{aphantasiaCognitiveClustering}
 \alias{aphantasiaCognitiveClustering-package}
-\title{aphantasiaCognitiveClustering: Data Analysis for "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering"}
+\title{aphantasiaCognitiveClustering: Data Analysis for "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery"}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-This package contains all the code to reproduce the analyses reported in the article "Uncovering Spatial and Verbal Cognitive Profiles in Aphantasia Through Unsupervised Clustering".
+This package contains all the code to reproduce the analyses reported in the article "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery".
 }
 \seealso{
 Useful links:
