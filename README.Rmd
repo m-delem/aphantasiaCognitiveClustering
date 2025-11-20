@@ -155,6 +155,6 @@ This GitHub repository is archived in
 <a href="https://doi.org/10.17605/OSF.IO/7VSX6" target="_blank">
 the OSF project dedicated to the study</a>, which allowed to assign a
 permanent DOI to the code and data. Thus, if you use this code or data in your
-research, please cite the OSF project with one of the following:
+research, please cite the OSF project with the following:
 
 > Delem, M., Cousineau, D., Cavalli, E., & Plancher, G. (2025, November 19). Supplementary materials for 'Unsupervised clustering reveals cognitive profiles in aphantasia'. https://doi.org/10.17605/OSF.IO/7VSX6
