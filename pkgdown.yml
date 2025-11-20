@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   analysis_report: analysis_report.html
   articles/manuscript: manuscript.html
-last_built: 2025-11-19T23:53Z
+last_built: 2025-11-20T12:05Z
 urls:
   reference: https://m-delem.github.io/aphantasiaCognitiveClustering/reference
   article: https://m-delem.github.io/aphantasiaCognitiveClustering/articles

@@ -8,17 +8,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/m-delem/aphantasiaCognitiveClustering/blob/master/DESCRIPTION)
+[`inst/CITATION`](https://github.com/m-delem/aphantasiaCognitiveClustering/blob/master/inst/CITATION)
 
-Delem M (2025). *aphantasiaCognitiveClustering: Data Analysis for
-"Unsupervised clustering reveals spatial and verbal cognitive profiles
-in aphantasia and typical imagery"*. R package version 1.0,
-<https://m-delem.github.io/aphantasiaCognitiveClustering/>.
+Delem M, Cousineau D, Cavalli E, Plancher G (2025). “Supplementary
+materials for 'Unsupervised clustering reveals cognitive profiles in
+aphantasia'.”
+[doi:10.17605/OSF.IO/7VSX6](https://doi.org/10.17605/OSF.IO/7VSX6).
 
-    @Manual{,
-      title = {aphantasiaCognitiveClustering: Data Analysis for "Unsupervised clustering reveals spatial and verbal cognitive profiles in aphantasia and typical imagery"},
-      author = {Maël Delem},
+    @Misc{,
+      title = {Supplementary materials for 'Unsupervised clustering reveals cognitive profiles in aphantasia'},
+      author = {Maël Delem and Denis Cousineau and Eddy Cavalli and Gaën Plancher},
       year = {2025},
-      note = {R package version 1.0},
-      url = {https://m-delem.github.io/aphantasiaCognitiveClustering/},
+      doi = {https://doi.org/10.17605/OSF.IO/7VSX6},
     }

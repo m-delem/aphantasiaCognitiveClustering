@@ -117,7 +117,7 @@ features!
 This GitHub repository is archived in [the OSF project dedicated to the
 study](https://doi.org/10.17605/OSF.IO/7VSX6), which allowed to assign a
 permanent DOI to the code and data. Thus, if you use this code or data
-in your research, please cite the OSF project with one of the following:
+in your research, please cite the OSF project with the following:
 
 > Delem, M., Cousineau, D., Cavalli, E., & Plancher, G. (2025, November
 > 19). Supplementary materials for ‘Unsupervised clustering reveals

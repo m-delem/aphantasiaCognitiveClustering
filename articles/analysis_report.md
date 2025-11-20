@@ -856,14 +856,14 @@ sessioninfo::session_info()
 #>  collate  C.UTF-8
 #>  ctype    C.UTF-8
 #>  tz       UTC
-#>  date     2025-11-19
+#>  date     2025-11-20
 #>  pandoc   3.1.11 @ /opt/hostedtoolcache/pandoc/3.1.11/x64/ (via rmarkdown)
 #>  quarto   1.8.26 @ /usr/local/bin/quarto
 #> 
 #> ─ Packages ───────────────────────────────────────────────────────────────────
 #>  ! package                       * version    date (UTC) lib source
 #>    abind                           1.4-8      2024-09-12 [1] RSPM
-#>    aphantasiaCognitiveClustering * 1.0        2025-11-19 [1] local
+#>    aphantasiaCognitiveClustering * 1.0        2025-11-20 [1] local
 #>    backports                       1.5.0      2024-05-23 [1] RSPM
 #>    BayesFactor                     0.9.12-4.7 2024-01-24 [1] RSPM
 #>    bayestestR                      0.17.0     2025-08-29 [1] RSPM
